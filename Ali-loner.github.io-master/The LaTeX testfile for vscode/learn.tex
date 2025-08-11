@@ -1,7 +1,27 @@
-\documentclass{report}
+\documentclass[a4paper]{report}
+\usepackage[margin=1in]{geometry}
 \usepackage{ctex}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{hyperref}
+% 添加关联目录的链接与设置
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+% 中英文摘要
+\newcommand{\enabstractname}{Abstract}
+\newcommand{\cnabstractname}{摘要}
+\newenvironment{enabstract}{%
+  \par\Large
+  \noindent\mbox{}\hfill{\bfseries \enabstractname}\hfill\mbox{}\par
+  \vskip 2.5ex}{\par\vskip 2.5ex}
+\newenvironment{cnabstract}{%
+  \par\Large
+  \noindent\mbox{}\hfill{\bfseries \cnabstractname}\hfill\mbox{}\par
+  \vskip 2.5ex}{\par\vskip 2.5ex}
 % python代码显示设置
 \definecolor{codegray}{gray}{0.98}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -26,20 +46,56 @@
 %设置目录显示的深度为section
 \setcounter{tocdepth}{1} 
 % title page
-\title{高阶关联鬼成像与鬼识别}
-\author{fivech}
+\title{基于布朗粒子运动的微小位移测量实验设计与验证}
+\author{E}
 \date{\today}
 % 正文部分
 \begin{document}
 \maketitle
-% 摘要部分
-\begin{abstract}
-摘要：
-\end{abstract}
+
+% 摘要部分(中文)
+\begin{cnabstract}
+\large
+摘要正文:  
+物质的性质与其内部结构密切相关，因此在物理学、化学、生物学、材料学、医学等方
+面，对物质内部结构的研究是必不可少的。最常见的一种方法是利用光子所产生的物质衍射
+干涉图样来研究其内部结构。然而实验得到合适的衍射干涉图样非常复杂，如何高效模拟产
+生复杂结构的干涉和衍射对物质内部结构的研究具有重要意义。本实验从两个角度研究复杂
+结构的干涉和衍射：一、利用结构光场，这里的结构光场主要是指一种全新的光子自由度-
+光子轨道角动量（OAM）光束，也称为涡旋光束及其叠加态形成的具有规则空间光场分布；
+二、利用分形复杂孔模拟物质内部的基本复杂结构。通过利用光场调控领域中常用的光学设
+备-空间光调制器高效便捷的实现对上述两种情况的实验研究及相应的实验结果分析处理。
+\par\textbf{关键字: } 关键字1，关键字2，关键字3
+%“\par在段首，表示另起一行，“\textbf{}”,花括号内的内容加粗显示
+\end{cnabstract}
+% 摘要部分(英文)
+\newpage
+\begin{enabstract}
+\large
+English abstract:  
+The properties of matter are closely related to its internal structure, so the study of the internal 
+structure of matter is essential in physics, chemistry, biology, materials science, medicine and other 
+fields. The most common method is to use the diffraction interference pattern produced by photons 
+to study the internal structure of matter. However, it is very complicated to obtain suitable 
+diffraction interference patterns experimentally. How to efficiently simulate the interference and 
+diffraction of complex structures is of great significance for the study of the internal structure of 
+matter. This experiment studies the interference and diffraction of complex structures from two 
+aspects: one, using structured light fields, where the structured light fields mainly refer to a new 
+degree of freedom of photons - orbital angular momentum (OAM) beams, also known as vortex 
+beams and their superposition states forming regular spatial light field distributions; two, using 
+fractal complex apertures to simulate the basic complex structures inside matter. By using a 
+common optical device in the field of light field manipulation - spatial light modulator, the 
+experimental study and corresponding experimental results analysis and processing of the above 
+two situations are efficiently and conveniently realized.
+\par\textbf{Keywords:} keyword1, keyword2, keyword3
+%“\par在段首，表示另起一行，“\textbf{}”,花括号内的内容加粗显示
+\end{enabstract}
+
 
 \tableofcontents
 \chapter{题意解析}
-\section{题目：高阶关联成像与鬼识别}
+
+\section{题目：基于布朗粒子运动的微小位移测量实验设计与验证}
 这里是section部分
 \subsection{目的}
 这里是subsection部分
@@ -52,325 +108,14 @@
 \section{代码展示}
 \subsection{网络模型}
 \begin{lstlisting}[language=Python, caption=生成器, label=code:generator]
-import torch
-import torch.nn as nn
-class Generator(nn.Module):
-    def __init__(self, nz=1024, ngf=64, nc=3):
-        super(Generator, self).__init__()
-        self.ngf = ngf 
-        self.nz = nz 
-        self.nc = nc 
-        self.main = nn.Sequential(
-            nn.ConvTranspose2d( nz, ngf * 16, 4, 1, 0, bias=False),
-            nn.BatchNorm2d(ngf * 16),
-            nn.ReLU(True),
-            
-            nn.ConvTranspose2d(ngf * 16, ngf * 8, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ngf * 8),
-            nn.ReLU(True),
-            
-            nn.ConvTranspose2d(ngf * 8, ngf * 4, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ngf * 4),
-            nn.ReLU(True),
-            
-            nn.ConvTranspose2d( ngf * 4, ngf * 2, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ngf * 2),
-            nn.ReLU(True),
-            
-            nn.ConvTranspose2d( ngf * 2, ngf, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ngf),
-            nn.ReLU(True),
 
-            nn.ConvTranspose2d( ngf, nc, 4, 2, 1, bias=False),
-            nn.Tanh()
-        )
-    def forward(self, input):
-        return self.main(input)
-\end{lstlisting}
-
-\begin{lstlisting}[language=Python, caption=判别器, label=code:discriminator]
-class Discriminator(nn.Module):
-    def __init__(self, ndf=64, nc=3):
-        super(Discriminator, self).__init__()
-        self.ndf = ndf 
-        self.nc = nc 
-        self.main = nn.Sequential(
-            nn.Conv2d(nc, ndf, 4, 2, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-
-            nn.Conv2d(ndf, ndf * 2, 4, 2, 1, bias=False),
-            nn.LeakyReLU(0.2, inplace=True),
-
-            nn.Conv2d(ndf * 2, ndf * 4, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 4),
-            nn.LeakyReLU(0.2, inplace=True),
-
-            nn.Conv2d(ndf * 4, ndf * 8, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 8),
-            nn.LeakyReLU(0.2, inplace=True),
-
-            nn.Conv2d(ndf * 8, ndf * 16, 4, 2, 1, bias=False),
-            nn.BatchNorm2d(ndf * 16),
-            nn.LeakyReLU(0.2, inplace=True),
-
-            nn.Conv2d(ndf * 16, 1, 4, 1, 0, bias=False),
-            nn.Sigmoid()
-        )
-
-    def forward(self, input):
-        return self.main(input)
 \end{lstlisting}
 \subsection{图片预处理}
 \begin{lstlisting}[language=Python, caption=图片处理, label=code:discriminator]
-import os
-from PIL import Image
-import numpy as np
-from tqdm import tqdm
 
-folder1 = r"E:\out1\sjcj3"
-folder2 = r'E:\out1\sjcj1'
-folder3 = r'E:\out1\sjcj2'
-output_folder = r'F:\XMU\schoolB_2\CUPEC\out\out_2'
-os.makedirs(output_folder, exist_ok=True)
-
-target_size = (128, 128)
-h, w = target_size
-
-# 分别获取并排序三个文件夹的文件名
-files1 = sorted(os.listdir(folder1))
-files2 = sorted(os.listdir(folder2))
-files3 = sorted(os.listdir(folder3))
-
-total = min(len(files1), len(files2), len(files3))
-
-for i in tqdm(range(total)):
-    fname1 = files1[i]
-    fname2 = files2[i]
-    fname3 = files3[i]
-
-    path1 = os.path.join(folder1, fname1)
-    path2 = os.path.join(folder2, fname2)
-    path3 = os.path.join(folder3, fname3)
-
-    try:
-        # 打开图像并统一尺寸
-        img1 = Image.open(path1).convert('RGB').resize(target_size)
-        img2 = Image.open(path2).convert('RGB')
-        img3 = Image.open(path3).convert('RGB')
-
-        img1_np = np.array(img1)
-        img2_np = np.array(img2)
-        img3_np = np.array(img3)
-
-        # 求和后除以1000
-        r_sum_2 = int(img2_np[:, :, 0].sum()) / 1000.
-        r_sum_3 = int(img3_np[:, :, 0].sum()) / 1000.
-
-        img1_np[:, :, 1] = r_sum_2
-        img1_np[:, :, 2] = r_sum_3
-
-        out_path = os.path.join(output_folder, fname1)
-        Image.fromarray(img1_np).save(out_path)
-
-    except Exception as e:
-        print(f"处理 {fname1} 时出错：{e}")
 \end{lstlisting}
 \subsection{训练}
 \begin{lstlisting}[language=Python, caption=训练, label=code:discriminator]
-import argparse
-import os
-import random
-import torch
-import torch.nn as nn
-import torch.nn.parallel
-import torch.backends.cudnn as cudnn
-import torch.optim as optim
-import torch.utils.data
-import torchvision.datasets as dset
-import torchvision.transforms as transforms
-import torchvision.utils as vutils
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from PIL import Image
-from torchvision.datasets import DatasetFolder
-from net import Generator
-from net import Discriminator 
-import os, sys
-import shutil   
 
-from tensorboardX import SummaryWriter
-writer = SummaryWriter('logs') ## 创建一个SummaryWriter的示例，默认目录名字为runs
-
-if os.path.exists("out1"):
-    print("删除 out1 文件夹！")
-    if sys.platform.startswith("win"):
-        shutil.rmtree("./out1")
-    else:
-        os.system("rm -r ./out1")
-
-print("创建 out1 文件夹！")
-os.mkdir("./out1")
-
-## 基本参数配置
-# 数据集所在路径
-dataroot = r"F:\XMU\schoolB_2\CUPEC\out"
-# 数据加载的进程数
-workers = 0
-# Batch size 大小
-batch_size = 64
-# 图片大小
-image_size = 128
-# 图片的通道数
-nc = 1
-# 尺寸
-sizex = 32
-sizey = 32
-# 向量维度
-nz = sizex * sizey
-# 生成器特征图通道数量单位
-ngf = 64
-# 判别器特征图通道数量单位
-ndf = 64
-
-# 损失函数
-criterion = nn.BCELoss()
-# 真假标签
-real_label = 1.0
-fake_label = 0.0
-# 是否使用GPU训练
-ngpu = 1
-device = torch.device("cuda:0" if (torch.cuda.is_available() and ngpu > 0) else "cpu")
-# 创建生成器与判别器
-netG = Generator(nz=nz, ngf=ngf, nc=nc).to(device)
-netD = Discriminator(ndf=ndf, nc=nc).to(device)
-# G和D的优化器，使用Adam
-# Adam学习率与动量参数
-lr = 0.0003
-beta1 = 0.5
-optimizerD = optim.Adam(netD.parameters(), lr=lr, betas=(beta1, 0.999))
-optimizerG = optim.Adam(netG.parameters(), lr=lr, betas=(beta1, 0.999))
-
-# 缓存生成结果
-img_list = []
-# 损失变量
-G_losses = []
-D_losses = []
-
-# batch变量
-iters = 0
-
-## 读取数据
-dataset = dset.ImageFolder(root=dataroot,
-                           transform=transforms.Compose([
-                               transforms.Resize(image_size),
-                               transforms.CenterCrop(image_size),
-                               transforms.ToTensor()
-                           ]))
-
-print(f"Found {len(dataset)} .bmp images.")
-
-dataloader = torch.utils.data.DataLoader(
-    dataset, batch_size=batch_size,
-    shuffle=True, num_workers=workers,
-    drop_last=True  # 丢弃最后不足 batch_size 的 batch
-)
-
-# 多GPU训练
-if (device.type == 'cuda') and (ngpu > 1):
-    netG = nn.DataParallel(netG, list(range(ngpu)))
-if (device.type == 'cuda') and (ngpu > 1):
-    netD = nn.DataParallel(netD, list(range(ngpu)))
-
-# 总epochs
-num_epochs = 20
-## 模型缓存接口
-if not os.path.exists('all_model/models'):
-    os.mkdir('all_model/models')
-print("Starting Training Loop...")
-fixed_noise = torch.randn(64, nz, 1, 1, device=device)
-
-# 真实图片
-real_image_PIL = Image.open("binary_black_white.png")  # 灰度图片 shape: (128,128)
-real_image = np.array(real_image_PIL)
-real_image_tensor = torch.from_numpy(real_image).float()
-real_image_tensor = real_image_tensor.unsqueeze(0).expand(batch_size, -1, -1, -1)  # shape: [64, 1, 128, 128]
-real_image_tensor = real_image_tensor.to(device)
-
-for epoch in range(num_epochs):
-    lossG = 0.0
-    lossD = 0.0
-    for i, data in enumerate(dataloader, 0):
-        ## 训练真实图片
-        netD.zero_grad()
-        # real_data = data[0].to(device)
-        real_data = real_image_tensor
-        b_size = batch_size  # real_data.size(0)
-        label = torch.full((b_size,), real_label, device=device)
-        output = netD(real_data).view(-1)
-        # 计算真实图片损失，梯度反向传播
-        errD_real = criterion(output, label)
-        errD_real.backward()
-        D_x = output.mean().item()
-
-        ## 训练生成图片
-        # 产生latent vectors (初始化)
-        noise = torch.randn(b_size, nz, 1, 1, device=device)
-        # 提取 R G B 通道的值
-        r_channel = data[0][:, 0, :, :]  # R 通道 (batch_size, sizex, sizey)
-        xl = 64 - sizex // 2
-        xr = 64 + sizex // 2
-        yl = 64 - sizey // 2
-        yr = 64 + sizey // 2
-        r_crop = r_channel[:, xl:xr, yl:yr]
-        r_flat = r_crop.reshape(batch_size, sizex * sizey)
-        r_norm = (r_flat - r_flat.min(dim=1, keepdim=True)[0]) / (
-                    r_flat.max(dim=1, keepdim=True)[0] - r_flat.min(dim=1, keepdim=True)[0] + 1e-8)
-        g_values = data[0][:, 1, 0, 0]  # G 通道的 (0,0) 值 (batch_size,)
-        b_values = data[0][:, 2, 0, 0]  # B 通道的 (0,0) 值 (batch_size,)
-        # 将 R 通道的均值赋给 noise
-        noise = r_norm.view(batch_size, nz, 1, 1)  # (batch_size,)
-        # 替换 sizex * sizey 维度的后两个值为 G 和 B
-        noise[:, -2, 0, 0] = g_values / 10.  # 倒数第二个位置赋 G 值
-        noise[:, -1, 0, 0] = b_values / 10. # 最后一个位置赋 B 值
-        noise = noise.to(device)
-
-        # 使用G生成图片
-        fake = netG(noise)
-        label.fill_(fake_label)
-        output = netD(fake.detach()).view(-1)
-        # 计算生成图片损失，梯度反向传播
-        errD_fake = criterion(output, label)
-        errD_fake.backward()
-        D_G_z1 = output.mean().item()
-
-        # 累加误差，参数更新
-        errD = errD_real + errD_fake
-        optimizerD.step()
-
-        netG.zero_grad()
-        label.fill_(real_label)  # 给生成图赋标签
-        # 对生成图再进行一次判别
-        output = netD(fake).view(-1)
-        # 计算生成图片损失，梯度反向传播
-        errG = criterion(output, label)
-        errG.backward()
-        D_G_z2 = output.mean().item()
-        optimizerG.step()
-
-        # 输出训练状态
-        if i % 50 == 0:
-            print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f'
-                  % (epoch, num_epochs, i, len(dataloader),
-                     errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
-
-        # 存储损失
-        lossG = lossG + errG.item()  # 累加batch损失
-        lossD = lossD + errD.item()  # 累加batch损失
-
-    writer.add_scalar('data/lossG', lossG, epoch)
-    writer.add_scalar('data/lossD', lossD, epoch)
-torch.save(netG, 'all_model/netG_16.pth')
-torch.save(netD, 'all_model/netD.pth')
 \end{lstlisting}
 \end{document}
