@@ -1,4 +1,4 @@
-\documentclass[a4paper]{report} % 或用 \documentclass[UTF8]{ctexrep}
+\documentclass[a4paper,draft]{report} % 或用 \documentclass[UTF8]{ctexrep}
 \usepackage[margin=1.25in]{geometry}
 \usepackage[UTF8]{ctex} % 中文支持
 \usepackage{listings}
@@ -9,6 +9,10 @@
 \usepackage{hyperref}
 \usepackage{amsmath, amssymb} % 数学符号支持
 \usepackage{bm} % 粗体数学符号
+\usepackage{graphicx} %插入图片的宏包
+\usepackage{float} %设置图片浮动位置的宏包
+\usepackage{subcaption}
+\usepackage{enumitem}
 
 \hypersetup{
     colorlinks=true,
@@ -62,12 +66,11 @@
 \large
   
 热力学基本规律在宏观体系中已得到广泛验证，但其在微观尺度下的适用性仍需深入探讨。
-该实验从微观粒子的热运动出发，以布朗运动为典型模型，结合实验与理论分析，
-通过测量布朗粒子的随机位移行为，验证不可逆过程中的熵产生机制。
-进一步地，我们建立了布朗运动中扩散系数与熵产生之间的热力学不确定关系，
-揭示了微观热运动背后的统计规律及其与热力学第二定律的一致性。
-该实验研究为从微观尺度验证热力学基本规律提供了有效途径，
-并对理解非平衡态下微观体系的热力学行为具有重要意义。
+本研究以布朗运动为典型模型，结合高精度离轴全息技术与理论分析，从微观粒子的热运动出发，系统研究了不可逆过程中的熵产生机制。
+实验通过离轴全息光路实时追踪布朗粒子的随机位移，利用干涉条纹与相位反演实现微球位置的高分辨率测定，从而精确统计其扩散行为与能量涨落特性。
+基于此，我们建立了布朗运动中扩散系数与熵产生率之间的定量关系，验证了微观尺度下热力学不确定关系的普适性，揭示了非平衡态统计规律与热力学第二定律的内在一致性。
+进一步通过熵产生率的时空分布分析，阐明了微观热运动的不可逆性及其与宏观热力学的关联机制。本研究不仅为离轴全息技术在微纳尺度热力学测量中的应用提供了一种思路，
+还为从微观层面验证热力学基本规律提供了实验依据，对理解非平衡态统计物理与微纳系统能量耗散机制具有重要意义。
 \par\textbf{关键字: } 布朗运动，熵产生率，热力学不确定关系，离轴全息
 \end{cnabstract}
 
@@ -265,13 +268,95 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
 
 该方法通过频域分离实现单次拍摄下的相位重建，具有结构简单、计算高效、适应性强等优点，广泛应用于显微成像、位相测量及动态过程监测等领域。
 
-
-
 \chapter{理论模拟}
 
 \chapter{装置设计}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{expreiment}
+    \caption{离轴全息实验装置示意图}
+    \label{fig:experiment} % 标签名称（建议前缀 fig:）
+\end{figure}
+
 \chapter{实验内容}
+\section{离轴全息确定物体位置}
+\subsection{光路搭建与调试}
+基于离轴全息成像原理，实验光路搭建过程如图\ref{fig:experiment}。搭建过程分为：
+\textbf{光源调制}：采用波长520 nm的半导体激光器（输出功率20 mW），经扩束系统（3×扩束器）形成直径3倍扩展的平行光束。
+\textbf{分光系统}：平行光束入射至第一普通分光棱镜（BS1，50:50分光比），分束为物光与参考光。物光路经反射镜M1转向后，照射分辨率板等样品，参考光路经反射镜M2反射后直接传输，两光路光程差控制在相干长度以内。最终会合在第二普通分光棱镜（BS2，50：50分光比）处，形成干涉图样。
+\textbf{离轴干涉}：第二普通分光棱镜（BS2）以15°偏转角实现离轴配置，物光与参考光干涉后形成离轴全息图，由科学级CMOS相机（像素尺寸2.4 μm，5472×3648像素）记录。
+通过调整CCD位置，使CCD的接收屏位于两束光的重叠处。
+\subsection{拍摄全息图}
+首先接通激光器电源，将CCD连接到计算机，打开相应拍摄软件。调整CCD的位置，使其处于物光和参考光完全重叠的位置。\\
+然后调整CCD的曝光时间和增益，使得拍摄的全息图亮度适中，细节清晰。左右和上下移动物体(分辨率板),
+使用CCD拍摄不同位置的分辨率板全息图，记录下每张全息图并保存。
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{lizhou1}
+    \caption{全息1}
+    \label{Fig.sub.1}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{lizhou2}
+    \caption{全息2}
+    \label{Fig.sub.2}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{lizhou3}
+    \caption{全息3}
+    \label{Fig.sub.3}    
+\end{subfigure}
+
+\caption{对分辨率板的不同位置重建并确认距离}
+\label{Fig.main1}
+\end{figure}
+\subsection{重建全息图}
+将拍摄的全息图导入计算机，使用Python进行处理。处理过程如下\\
+\begin{itemize}
+    \item 首先对全息图进行二维傅里叶变换，得到频域图像。
+    \item 接着在频域图像中选择合适的带通滤波器，滤除零级像和共轭像的干扰。
+    \item 然后对滤波后的频域图像进行逆傅里叶变换，得到物光的复振幅分布。
+    \item 使用菲涅尔衍射积分方法，将物光复振幅传播到不同距离，重建出物体在不同位置的图像。
+    使用算法评估图像的聚焦程度，在搜索范围内检索每一个z得到一个评价值函数。
+    \item 由评价函数最大值对应的z值，作为物体的实际位置的z
+\end{itemize}
+我们将上述过程集成于一个python程序，只需要将对应图片放入指定文件夹，运行程序即可完成重建。\\
+下面是我们使用\ref{Fig.main1}拍摄的全息图进行重建的结果展示，结果中展示了原全息图、确定距离z的过程图
+、在最佳距离z重建的重建图和重建图对应的相位分布：
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.9\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{lizhou1分辨率板}
+    \caption{离轴1}
+    \label{Fig.sub.4}
+\end{subfigure}
+
+\begin{subfigure}{0.9\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{lizhou2分辨率板}
+    \caption{离轴2}
+    \label{Fig.sub.5}
+\end{subfigure}
+
+\begin{subfigure}{0.9\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{lizhou3分辨率板}
+    \caption{离轴3}
+    \label{Fig.sub.6}    
+\end{subfigure}
+
+\caption{对分辨率板的不同位置重建并确认距离}
+\label{Fig.main2}
+\end{figure}
+
 
 \chapter{误差分析}
 
@@ -286,17 +371,17 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
 \toprule
 队员 & 分工 \\
 \midrule
-队员一 & 负责数据收集与清洗，包括数据集的整理、缺失值处理以及特征初步筛选。 \\
-队员二 & 负责模型搭建与训练，包括选择合适的算法、调整参数以及模型性能评估。 \\
-队员三 & 负责实验结果分析与可视化，将模型输出进行图表化展示，并撰写分析报告。 \\
-队员四 & 负责论文撰写与排版，整合各部分内容，确保格式和逻辑的统一性。 \\
+队员一 & 负责搭建光路，全息重建的代码，实验报告的撰写。 \\
+队员二 & 负责热学相关部分原理的推导和微球布朗运动的模拟。 \\
+队员三 & 负责制作ppt和辅助光路搭建。 \\
+队员四 & 负责后期数据处理。 \\
 \bottomrule
 \end{tabularx}
 
-\section{代码展示}
+\section{部分代码展示}
 
-\subsection{网络模型}
-\begin{lstlisting}[language=Python, caption=生成器, label=code:generator]
+\subsection{重建离轴全息}
+\begin{lstlisting}[language=Python, caption=离轴全息重建, label=code:generator]
 # 这里是代码示例
 \end{lstlisting}
 
