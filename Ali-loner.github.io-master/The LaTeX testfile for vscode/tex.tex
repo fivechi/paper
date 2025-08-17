@@ -1,4 +1,5 @@
-\documentclass[a4paper,draft]{report} % 或用 \documentclass[UTF8]{ctexrep}
+\documentclass[a4paper,draft]{report}
+\usepackage[utf8]{inputenc}
 \usepackage[margin=1.25in]{geometry}
 \usepackage[UTF8]{ctex} % 中文支持
 \usepackage{listings}
@@ -13,6 +14,7 @@
 \usepackage{float} %设置图片浮动位置的宏包
 \usepackage{subcaption}
 \usepackage{enumitem}
+\renewcommand{\bibname}{}
 
 \hypersetup{
     colorlinks=true,
@@ -56,9 +58,10 @@
 \setcounter{tocdepth}{1} 
 
 \title{基于布朗粒子运动的微小位移测量实验设计与验证}
-\author{E}
+\author{}
 \date{\today}
 
+%% 正文开始
 \begin{document}
 \maketitle
 
@@ -66,11 +69,12 @@
 \large
   
 热力学基本规律在宏观体系中已得到广泛验证，但其在微观尺度下的适用性仍需深入探讨。
-本研究以布朗运动为典型模型，结合高精度离轴全息技术与理论分析，从微观粒子的热运动出发，系统研究了不可逆过程中的熵产生机制。
-实验通过离轴全息光路实时追踪布朗粒子的随机位移，利用干涉条纹与相位反演实现微球位置的高分辨率测定，从而精确统计其扩散行为与能量涨落特性。
-基于此，我们建立了布朗运动中扩散系数与熵产生率之间的定量关系，验证了微观尺度下热力学不确定关系的普适性，揭示了非平衡态统计规律与热力学第二定律的内在一致性。
-进一步通过熵产生率的时空分布分析，阐明了微观热运动的不可逆性及其与宏观热力学的关联机制。本研究不仅为离轴全息技术在微纳尺度热力学测量中的应用提供了一种思路，
-还为从微观层面验证热力学基本规律提供了实验依据，对理解非平衡态统计物理与微纳系统能量耗散机制具有重要意义。
+该实验从微观粒子的热运动出发，以布朗运动为典型模型，结合实验与理论分析，通过测量布朗粒子的随机位移行为，验证不可逆过程中的熵产生机制。
+进一步地，我们建立了布朗运动中扩散系数与熵产生之间的热力学不确定关系，揭示了微观热运动背后的统计规律及其与热力学第二定律的一致性。
+该实验研究为从微观尺度验证热力学基本规律提供了有效途径，并对理解非平衡态下微观体系的热力学行为具有重要意义。\\
+为了研究布朗粒子的运动，我们设计并搭建了基于离轴全息术的数字全息显微系统，计划实现对微米级粒子三维位置的高精度测量。
+在确定物体的位置时，我们优化了确定z轴位置的算法，重建出聚焦效果最好的全息图并确定位置z，通过实验验证了该方法的有效性。
+同时还使用外加电场的方式为布朗运动添加了随机噪声。通过测量不同噪声强度下粒子的扩散系数，验证了噪声强度与扩散系数之间的修正关系。
 \par\textbf{关键字: } 布朗运动，熵产生率，热力学不确定关系，离轴全息
 \end{cnabstract}
 
@@ -78,22 +82,46 @@
 \begin{enabstract}
 \large
 The basic laws of thermodynamics have been widely verified in the macro system, but its applicability at the micro scale still needs to be further explored.
-Based on the thermal motion of microscopic particles, this experiment takes Brownian motion as a typical model, and combines experimental and theoretical analysis.
-By measuring the random displacement behavior of Brownian particles, the entropy generation mechanism in irreversible process is verified.
-Furthermore, we establish the thermodynamic uncertainty relationship between diffusion coefficient and entropy generation in Brownian motion.
-The statistical law behind microscopic thermal motion and its consistency with the second law of thermodynamics are revealed.
-This experimental study provides an effective way to verify the basic laws of thermodynamics from the microscopic scale.
-It is of great significance to understand the thermodynamic behavior of micro-system in non-equilibrium state.
-\par\textbf{Keywords:} Brownian motion, entropy production rate, thermodynamic uncertainty relation, off-axis holography
+Based on the thermal motion of microscopic particles, this experiment takes Brownian motion as a typical model, combines experiments and theoretical analysis, and verifies the entropy generation mechanism in the irreversible process by measuring the random displacement behavior of Brownian particles.
+Furthermore, we establish the thermodynamic uncertainty relationship between diffusion coefficient and entropy generation in Brownian motion, and reveal the statistical law behind microscopic thermal motion and its consistency with the second law of thermodynamics.
+This experimental study provides an effective way to verify the basic laws of thermodynamics from the micro-scale, and is of great significance to understand the thermodynamic behavior of micro-systems in non-equilibrium state. \\
+In order to study the motion of Brownian particles, we designed and built a digital holographic microscope system based on off-axis holography, and planned to achieve high-precision measurement of the three-dimensional position of micron particles.
+When determining the position of the object, we optimized the algorithm for determining the position of the Z axis, reconstructed the hologram with the best focusing effect and determined the position Z. The effectiveness of this method was verified by experiments.
+At the same time, random noise is added to Brownian motion by means of external electric field. By measuring the diffusion coefficient of particles under different noise intensity, the correction relationship between noise intensity and diffusion coefficient is verified.
 \end{enabstract}
 
 \tableofcontents
 
-\chapter{题意解析}
-\section{题目}
-这里是section部分
-\subsection{目的}
-这里是subsection部分
+\chapter{实验背景介绍}
+\section{布朗运动}
+布朗运动是指悬浮在流体中的微小粒子由于流体分子热运动而产生的随机运动现象。
+该现象由植物学家罗伯特·布朗于1827年首次观察到。（后面这部分要重新写）
+\section{熵产生}
+熵产生是非平衡态热力学的核心物理量，表征系统内部不可逆过程引起的总熵变化速率。其数学表达式基于热力学第二定律，
+其中总熵由系统熵变与环境熵变共同构成。该概念由伊利亚·普里高津提出理论框架，揭示开放系统中能量耗散与时空结构的形成机制，
+如贝纳德对流胞的形成正是熵产生驱动的耗散结构典型实例（后面这部分要重新写）
+\section{全息术}
+1948年，丹尼斯·伽博（Dennis Gabor）提出了一种新的两步无透镜成像过程，他称之为波前重现，
+现在我们把它叫做全息术\cite{goodman}。即有一个合适的相干参考波与一个被物体衍射或散射的光波同时存在，
+那么衍射被或时才波的振幅和相位的信息就能够被记录下来，尽管记录介质只对强度有响应。
+由这样的干涉图样最终可以得到原来物体的像。根据参考光与物光的相对位置关系，全息术分为两种：同轴全息和离轴全息。\\
+1.\textbf{同轴全息}：同轴全息由盖伯在最初提出时采用，其特点是参考光与物光沿相同方向传播，并在感光面上形成干涉图样。
+使用这种方法记录全息图时，物体中心、参考光中心和全息图中心三点共线。其光路的示意图如图\ref{fig:tongzhoushiyi}\cite{shuzi1}所示。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{同轴示意图}
+    \caption{同轴全息光路示意图}
+    \label{fig:tongzhoushiyi}
+\end{figure}
+
+2.\textbf{离轴全息}：为克服同轴全息的像面重叠问题，1962年刘易斯·莱斯（Emmett Leith）与尤里·乌帕特涅克斯（Jurīs Upatnieks）提出了离轴全息方法。
+在该方案中，参考光与物光以一定角度入射到记录面上，从而在频谱空间中将真实像、共轭像和直流分量分离开来。其光路的示意图如图\ref{fig:lizhoushiyi}\cite{shuzi1}所示。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{离轴示意图}
+    \caption{离轴全息光路示意图}
+    \label{fig:lizhoushiyi} 
+\end{figure}
 
 \chapter{实验原理}
 \section{有效动能温度公式推导}
@@ -213,7 +241,7 @@ I(x,y) = |O(x,y) + R(x,y)|^2 = |O(x,y)|^2 + |A_r|^2 + 2A_r \text{Re}\{O(x,y)e^{-
 其中第三项包含物光的振幅与相位信息。由于参考光与物光同轴，所有频谱成分在频域中重叠于零频附近。
 
 \subsection{重建}
-同轴全息重建需通过相位恢复算法或多次曝光法分离重叠像。典型数值重建步骤如下：
+同轴全息重建需通过相位恢复算法或多次曝光法分离重叠像。典型数值重建步骤如下\cite{shuzi2}：
 \begin{enumerate}
     \item 对全息图 $I(x,y)$ 进行二维傅里叶变换：
     \begin{equation}
@@ -233,7 +261,6 @@ I(x,y) = |O(x,y) + R(x,y)|^2 = |O(x,y)|^2 + |A_r|^2 + 2A_r \text{Re}\{O(x,y)e^{-
 \end{enumerate}
 
 同轴全息系统结构简单、光路稳定，适用于粒子场测量与微小物体成像，但需通过相位调制或算法处理解决像重叠问题。
-
 
 \section{离轴全息的原理与重建}
 离轴全息（Off-axis Holography）是一种通过在记录过程中引入参考光与物光的倾斜干涉来实现像分离的数字全息方法。
@@ -271,20 +298,22 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
 \chapter{理论模拟}
 
 \chapter{装置设计}
-
+\section{实验仪器}
+这里要插入我们装置的图片
+\section{光路图}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{expreiment}
     \caption{离轴全息实验装置示意图}
-    \label{fig:experiment} % 标签名称（建议前缀 fig:）
+    \label{fig:experiment} 
 \end{figure}
 
 \chapter{实验内容}
 \section{离轴全息确定物体位置}
 \subsection{光路搭建与调试}
-基于离轴全息成像原理，实验光路搭建过程如图\ref{fig:experiment}。搭建过程分为：
-\textbf{光源调制}：采用波长520 nm的半导体激光器（输出功率20 mW），经扩束系统（3×扩束器）形成直径3倍扩展的平行光束。
-\textbf{分光系统}：平行光束入射至第一普通分光棱镜（BS1，50:50分光比），分束为物光与参考光。物光路经反射镜M1转向后，照射分辨率板等样品，参考光路经反射镜M2反射后直接传输，两光路光程差控制在相干长度以内。最终会合在第二普通分光棱镜（BS2，50：50分光比）处，形成干涉图样。
+基于离轴全息成像原理，实验光路搭建过程如图\ref{fig:experiment}。搭建过程分为：\\
+\textbf{光源调制}：采用波长520 nm的半导体激光器（输出功率20 mW），经扩束系统（3×扩束器）形成直径3倍扩展的平行光束。\\
+\textbf{分光系统}：平行光束入射至第一普通分光棱镜（BS1，50:50分光比），分束为物光与参考光。物光路经反射镜M1转向后，照射分辨率板等样品，参考光路经反射镜M2反射后直接传输，两光路光程差控制在相干长度以内。最终会合在第二普通分光棱镜（BS2，50：50分光比）处，形成干涉图样。\\
 \textbf{离轴干涉}：第二普通分光棱镜（BS2）以15°偏转角实现离轴配置，物光与参考光干涉后形成离轴全息图，由科学级CMOS相机（像素尺寸2.4 μm，5472×3648像素）记录。
 通过调整CCD位置，使CCD的接收屏位于两束光的重叠处。
 \subsection{拍摄全息图}
@@ -363,7 +392,8 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
 \chapter{结论与展望}
 
 \chapter{参考文献}
-
+\bibliographystyle{plain}
+\bibliography{refs}
 \chapter{附录}
 \section{人员分工}
 \renewcommand{\arraystretch}{1.3} % 表格行距调整
@@ -371,10 +401,10 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
 \toprule
 队员 & 分工 \\
 \midrule
-队员一 & 负责搭建光路，全息重建的代码，实验报告的撰写。 \\
-队员二 & 负责热学相关部分原理的推导和微球布朗运动的模拟。 \\
-队员三 & 负责制作ppt和辅助光路搭建。 \\
-队员四 & 负责后期数据处理。 \\
+队员一 & 负责搭建光路，全息重建的代码，实验报告的撰写等。 \\
+队员二 & 负责热学相关部分原理的推导和微球布朗运动的模拟等。 \\
+队员三 & 负责制作ppt和辅助光路搭建，查阅文献等。 \\
+队员四 & 负责后期数据处理,误差分析，查阅文献等。 \\
 \bottomrule
 \end{tabularx}
 
@@ -382,7 +412,94 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
 
 \subsection{重建离轴全息}
 \begin{lstlisting}[language=Python, caption=离轴全息重建, label=code:generator]
-# 这里是代码示例
+import torch
+import torch.fft
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+import time
+
+# 读取彩色 BMP，只取绿色通道
+holo_color = cv2.imread(hologram_path, cv2.IMREAD_COLOR)
+if holo_color is None:
+    raise FileNotFoundError(f"无法读取全息图文件: {hologram_path}")
+
+holo = holo_color[:, :, 1].astype(np.float32)  # 绿色通道
+Ny, Nx = holo.shape
+
+# 将数据转移到GPU
+holo_gpu = torch.from_numpy(holo).to(device)
+
+# 计算频谱
+H = torch.fft.fft2(holo_gpu)
+H_shifted = torch.fft.fftshift(H)
+spectrum = torch.abs(H_shifted).cpu().numpy()
+
+# 自动寻找实像频谱峰值位置
+center = (Nx // 2, Ny // 2)
+mask = np.ones_like(spectrum, dtype=bool)
+mask[center[1] - 30:center[1] + 30, center[0] - 30:center[0] + 30] = False
+max_pos = np.unravel_index(np.argmax(spectrum * mask), spectrum.shape)
+filter_center = (max_pos[1], max_pos[0])  # (x, y)
+print(f"Auto-detected filter center: {filter_center}")
+
+# 生成圆形滤波器
+Y, X = torch.meshgrid(torch.arange(Ny, device=device),
+                      torch.arange(Nx, device=device), indexing='ij')
+R = torch.sqrt((X - filter_center[0]) ** 2 + (Y - filter_center[1]) ** 2)
+mask_circle = (R < filter_radius).float()
+
+# 滤波
+H_filtered = H_shifted * mask_circle
+H_unshifted = torch.fft.ifftshift(H_filtered)
+field_filtered = torch.fft.ifft2(H_unshifted)
+
+# 定义清晰度评价函数
+def tenengrad(image):
+    """GPU加速"""
+    # Sobel算子
+    sobel_x = torch.tensor([[1, 0, -1], [2, 0, -2], [1, 0, -1]],
+                           dtype=torch.float32, device=device).view(1, 1, 3, 3)
+    sobel_y = torch.tensor([[1, 2, 1], [0, 0, 0], [-1, -2, -1]],
+                           dtype=torch.float32, device=device).view(1, 1, 3, 3)
+
+    img = image.unsqueeze(0).unsqueeze(0)
+
+    grad_x = torch.nn.functional.conv2d(img, sobel_x, padding=1)
+    grad_y = torch.nn.functional.conv2d(img, sobel_y, padding=1)
+
+    grad_mag = grad_x ** 2 + grad_y ** 2
+    return torch.sum(grad_mag)
+
+for i, z_test in enumerate(z_values):
+    # 计算传播函数 - 修复维度问题
+    kz = torch.sqrt(k_sq - KX ** 2 - KY ** 2 + 0j)
+    H_prop = torch.exp(1j * z_test * kz)
+
+    # 传播重建
+    field_fft = torch.fft.fft2(field_filtered)
+    field_recon = torch.fft.ifft2(field_fft * H_prop)
+    amp = torch.abs(field_recon)
+
+    # 只计算中心ROI区域
+    roi_amp = amp[roi_y_start:roi_y_end, roi_x_start:roi_x_end]
+
+    # 计算清晰度得分
+    score = tenengrad(roi_amp)
+    all_scores.append(score.item())
+
+    # 更新最佳结果
+    if score > best_score:
+        best_score = score
+        best_z = z_test.item()
+        best_amp = amp.detach().clone()
+
+# 使用最佳距离重建最终结果
+kz_best = torch.sqrt(k_sq - KX ** 2 - KY ** 2 + 0j)
+H_prop_best = torch.exp(1j * best_z * kz_best)
+field_recon_best = torch.fft.ifft2(torch.fft.fft2(field_filtered) * H_prop_best)
+amp_best = torch.abs(field_recon_best)
+phase_best = torch.angle(field_recon_best)
 \end{lstlisting}
 
 \section{部分全息图与拍摄图展示}
