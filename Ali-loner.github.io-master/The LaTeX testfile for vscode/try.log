@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  18 AUG 2025 17:26
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  18 AUG 2025 17:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**tex
-(./tex.tex
+**try
+(./try.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (d:/texlive/2023/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
@@ -359,7 +359,6 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
  (d:/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Option `draft' set `true' on input line 4060.
 Package hyperref Info: Option `unicode' set `true' on input line 4060.
 Package hyperref Info: Hyper figures OFF on input line 4177.
 Package hyperref Info: Link nesting OFF on input line 4182.
@@ -560,8 +559,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 Package hyperref Info: Option `colorlinks' set `true' on input line 24.
  (d:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (./tex.aux)
-\openout1 = `tex.aux'.
+) (./try.aux)
+\openout1 = `try.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
 LaTeX Font Info:    ... okay on input line 65.
@@ -675,14 +674,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 65.
 \c@lstlisting=\count339
-
-Package hyperref Warning: Draft mode on.
-
 Package hyperref Info: Link coloring ON on input line 65.
+(./try.out) (./try.out)
+\@outlinefile=\write3
+\openout3 = `try.out'.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
-(d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
@@ -690,14 +690,62 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [1] [2] (./tex.toc)
-\tf@toc=\write3
-\openout3 = `tex.toc'.
+] [1] [2] (./try.toc)
+\tf@toc=\write4
+\openout4 = `try.toc'.
 
  [3
 
 ]
 Chapter 1.
+
+LaTeX Warning: Reference `fig:tongzhoushiyi' on page 4 undefined on input line 112.
+
+
+LaTeX Warning: Reference `fig:lizhoushiyi' on page 4 undefined on input line 116.
+
+[4
+
+]
+Chapter 2.
+[5
+
+] [6] [7] [8]
+Chapter 3.
+[9
+
+]
+Chapter 4.
+[10
+
+]
+Chapter 5.
+
+LaTeX Warning: Reference `fig:experiment' on page 11 undefined on input line 301.
+
+Missing character: There is no μ (U+03BC) in font [lmroman10-regular]:mapping=tex-text;!
+[11
+
+]
+
+LaTeX Warning: Reference `Fig.main1' on page 12 undefined on input line 324.
+
+[12]
+Chapter 6.
+[13
+
+]
+Chapter 7.
+[14
+
+]
+Chapter 8.
+
+Overfull \hbox (21.07874pt too wide) in paragraph at lines 343--344
+[][] 
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 348.
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -721,56 +769,24 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-[4
+(./try.bbl [15
 
-] [5]
-Chapter 2.
-[6
+]) [16
 
-] [7] [8] [9]
-Chapter 3.
-[10
+] (./try.aux)
 
-]
-Chapter 4.
-[11
+LaTeX Warning: There were undefined references.
 
-]
-Chapter 5.
-Missing character: There is no μ (U+03BC) in font [lmroman10-regular]:mapping=tex-text;!
-[12
-
-] [13]
-Overfull \vbox (49.56079pt too high) has occurred while \output is active []
-
- [14]
-Chapter 6.
-[15
-
-]
-Chapter 7.
-[16
-
-]
-Chapter 8.
-
-Overfull \hbox (21.07874pt too wide) in paragraph at lines 413--414
-[][] |
- []
-
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 418.
-(./tex.bbl [17
-
-]) [18
-
-] (./tex.aux) ) 
+Package rerunfilecheck Info: File `try.out' has not changed.
+(rerunfilecheck)             Checksum: 3D4A8F5F26890562AF126EA202879BE3;2136.
+ ) 
 Here is how much of TeX's memory you used:
- 19699 strings out of 478630
- 408618 string characters out of 5847730
+ 19529 strings out of 478630
+ 405587 string characters out of 5847730
  1862012 words of memory out of 5000000
- 39495 multiletter control sequences out of 15000+600000
- 527654 words of font info for 128 fonts, out of 8000000 for 9000
+ 39328 multiletter control sequences out of 15000+600000
+ 527646 words of font info for 127 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 89i,9n,97p,413b,1133s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,9n,97p,413b,1255s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tex.pdf (19 pages).
+Output written on try.pdf (17 pages).

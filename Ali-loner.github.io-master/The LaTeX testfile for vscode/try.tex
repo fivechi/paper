@@ -1,4 +1,4 @@
-\documentclass[a4paper,draft]{report}
+\documentclass[a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1.25in]{geometry}
 \usepackage[UTF8]{ctex} % 中文支持
@@ -111,22 +111,10 @@ At the same time, random noise is added to Brownian motion by means of external 
 1.\textbf{同轴全息}：同轴全息由盖伯在最初提出时采用，其特点是参考光与物光沿相同方向传播，并在感光面上形成干涉图样。
 使用这种方法记录全息图时，物体中心、参考光中心和全息图中心三点共线。其光路的示意图如图\ref{fig:tongzhoushiyi}\cite{shuzi1}所示。
 这种全息图具有比较多的限制，它产生重叠的孪生像而不是一个像，并且是不可分离的。
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{同轴示意图}
-    \caption{同轴全息光路示意图}
-    \label{fig:tongzhoushiyi}
-\end{figure}
 
 2.\textbf{离轴全息}：为克服同轴全息的像面重叠问题，1962年刘易斯·莱斯（Emmett Leith）与尤里·乌帕特涅克斯（Jurīs Upatnieks）提出了离轴全息方法。
 在该方案中，参考光与物光以一定角度入射到记录面上。其光路的示意图如图\ref{fig:lizhoushiyi}\cite{shuzi1}所示。
 这种全息解决了同轴全息的孪生像的问题，使用倾斜光作为参考光，从而在频谱空间中将真实像、共轭像和直流分量分离开来。
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{离轴示意图}
-    \caption{离轴全息光路示意图}
-    \label{fig:lizhoushiyi} 
-\end{figure}
 
 \chapter{实验原理}
 \section{有效动能温度公式推导}
@@ -306,12 +294,6 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
 \section{实验仪器}
 这里要插入我们装置的图片
 \section{光路图}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{expreiment}
-    \caption{离轴全息实验装置示意图}
-    \label{fig:experiment} 
-\end{figure}
 
 \chapter{实验内容}
 \section{离轴全息确定物体位置}
@@ -326,32 +308,7 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
 \par
 然后调整CCD的曝光时间和增益，使得拍摄的全息图亮度适中，细节清晰。左右和上下移动物体(分辨率板),
 使用CCD拍摄不同位置的分辨率板全息图，记录下每张全息图并保存。
-\begin{figure}[H]
-\centering
-\begin{subfigure}{0.3\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{lizhou1}
-    \caption{全息1}
-    \label{Fig.sub.1}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.3\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{lizhou2}
-    \caption{全息2}
-    \label{Fig.sub.2}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.3\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{lizhou3}
-    \caption{全息3}
-    \label{Fig.sub.3}    
-\end{subfigure}
 
-\caption{对分辨率板的不同位置重建并确认距离}
-\label{Fig.main1}
-\end{figure}
 \subsection{重建全息图}
 将拍摄的全息图导入计算机，使用Python进行处理。处理过程如下
 \begin{itemize}
@@ -366,33 +323,6 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
 \par
 下面是我们使用\ref{Fig.main1}拍摄的全息图进行重建的结果展示，结果中展示了原全息图、确定距离z的过程图
 、在最佳距离z重建的重建图和重建图对应的相位分布：
-\begin{figure}[H]
-\centering
-\begin{subfigure}{0.9\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{lizhou1分辨率板}
-    \caption{离轴1}
-    \label{Fig.sub.4}
-\end{subfigure}
-
-\begin{subfigure}{0.9\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{lizhou2分辨率板}
-    \caption{离轴2}
-    \label{Fig.sub.5}
-\end{subfigure}
-
-\begin{subfigure}{0.9\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{lizhou3分辨率板}
-    \caption{离轴3}
-    \label{Fig.sub.6}    
-\end{subfigure}
-
-\caption{对分辨率板的不同位置重建并确认距离}
-\label{Fig.main2}
-\end{figure}
-
 
 \chapter{误差分析}
 
@@ -416,94 +346,7 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
 
 \subsection{重建离轴全息}
 \begin{lstlisting}[language=Python, caption=离轴全息重建, label=code:generator]
-import torch
-import torch.fft
-import cv2
-import numpy as np
-import matplotlib.pyplot as plt
-import time
 
-# 读取彩色 BMP，只取绿色通道
-holo_color = cv2.imread(hologram_path, cv2.IMREAD_COLOR)
-if holo_color is None:
-    raise FileNotFoundError(f"无法读取全息图文件: {hologram_path}")
-
-holo = holo_color[:, :, 1].astype(np.float32)  # 绿色通道
-Ny, Nx = holo.shape
-
-# 将数据转移到GPU
-holo_gpu = torch.from_numpy(holo).to(device)
-
-# 计算频谱
-H = torch.fft.fft2(holo_gpu)
-H_shifted = torch.fft.fftshift(H)
-spectrum = torch.abs(H_shifted).cpu().numpy()
-
-# 自动寻找实像频谱峰值位置
-center = (Nx // 2, Ny // 2)
-mask = np.ones_like(spectrum, dtype=bool)
-mask[center[1] - 30:center[1] + 30, center[0] - 30:center[0] + 30] = False
-max_pos = np.unravel_index(np.argmax(spectrum * mask), spectrum.shape)
-filter_center = (max_pos[1], max_pos[0])  # (x, y)
-print(f"Auto-detected filter center: {filter_center}")
-
-# 生成圆形滤波器
-Y, X = torch.meshgrid(torch.arange(Ny, device=device),
-                      torch.arange(Nx, device=device), indexing='ij')
-R = torch.sqrt((X - filter_center[0]) ** 2 + (Y - filter_center[1]) ** 2)
-mask_circle = (R < filter_radius).float()
-
-# 滤波
-H_filtered = H_shifted * mask_circle
-H_unshifted = torch.fft.ifftshift(H_filtered)
-field_filtered = torch.fft.ifft2(H_unshifted)
-
-# 定义清晰度评价函数
-def tenengrad(image):
-    """GPU加速"""
-    # Sobel算子
-    sobel_x = torch.tensor([[1, 0, -1], [2, 0, -2], [1, 0, -1]],
-                           dtype=torch.float32, device=device).view(1, 1, 3, 3)
-    sobel_y = torch.tensor([[1, 2, 1], [0, 0, 0], [-1, -2, -1]],
-                           dtype=torch.float32, device=device).view(1, 1, 3, 3)
-
-    img = image.unsqueeze(0).unsqueeze(0)
-
-    grad_x = torch.nn.functional.conv2d(img, sobel_x, padding=1)
-    grad_y = torch.nn.functional.conv2d(img, sobel_y, padding=1)
-
-    grad_mag = grad_x ** 2 + grad_y ** 2
-    return torch.sum(grad_mag)
-
-for i, z_test in enumerate(z_values):
-    # 计算传播函数 - 修复维度问题
-    kz = torch.sqrt(k_sq - KX ** 2 - KY ** 2 + 0j)
-    H_prop = torch.exp(1j * z_test * kz)
-
-    # 传播重建
-    field_fft = torch.fft.fft2(field_filtered)
-    field_recon = torch.fft.ifft2(field_fft * H_prop)
-    amp = torch.abs(field_recon)
-
-    # 只计算中心ROI区域
-    roi_amp = amp[roi_y_start:roi_y_end, roi_x_start:roi_x_end]
-
-    # 计算清晰度得分
-    score = tenengrad(roi_amp)
-    all_scores.append(score.item())
-
-    # 更新最佳结果
-    if score > best_score:
-        best_score = score
-        best_z = z_test.item()
-        best_amp = amp.detach().clone()
-
-# 使用最佳距离重建最终结果
-kz_best = torch.sqrt(k_sq - KX ** 2 - KY ** 2 + 0j)
-H_prop_best = torch.exp(1j * best_z * kz_best)
-field_recon_best = torch.fft.ifft2(torch.fft.fft2(field_filtered) * H_prop_best)
-amp_best = torch.abs(field_recon_best)
-phase_best = torch.angle(field_recon_best)
 \end{lstlisting}
 
 \section{部分全息图与拍摄图展示}

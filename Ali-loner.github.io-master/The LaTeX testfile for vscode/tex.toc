@@ -27,9 +27,9 @@
 \contentsline {subsection}{\numberline {5.1.3}重建全息图}{13}{subsection.5.1.3}%
 \contentsline {chapter}{\numberline {6}误差分析}{15}{chapter.6}%
 \contentsline {chapter}{\numberline {7}结论与展望}{16}{chapter.7}%
-\contentsline {chapter}{\numberline {8}参考文献}{17}{chapter.8}%
-\contentsline {chapter}{\numberline {9}附录}{19}{chapter.9}%
-\contentsline {section}{\numberline {9.1}人员分工}{19}{section.9.1}%
-\contentsline {section}{\numberline {9.2}部分代码展示}{19}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}重建离轴全息}{19}{subsection.9.2.1}%
-\contentsline {section}{\numberline {9.3}部分全息图与拍摄图展示}{21}{section.9.3}%
+\contentsline {chapter}{\numberline {8}附录}{17}{chapter.8}%
+\contentsline {section}{\numberline {8.1}人员分工}{17}{section.8.1}%
+\contentsline {section}{\numberline {8.2}部分代码展示}{17}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}重建离轴全息}{17}{subsection.8.2.1}%
+\contentsline {section}{\numberline {8.3}部分全息图与拍摄图展示}{17}{section.8.3}%
+\contentsline {chapter}{参考文献}{17}{section.8.3}%
