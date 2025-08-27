@@ -1,18 +1,63 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{brown1828}
+Robert Brown.
+\newblock A brief account of microscopical observations on the particles contained in the pollen of plants.
+\newblock {\em Philosophical Magazine}, 4:161--173, 1828.
+
+\bibitem{dhont1996brownian}
+Jan K.~G. Dhont.
+\newblock {\em An Introduction to Dynamics of Colloids}.
+\newblock Elsevier, 1996.
+
+\bibitem{einstein1905}
+Albert Einstein.
+\newblock On the movement of small particles suspended in a stationary liquid demanded by the molecular-kinetic theory of heat.
+\newblock {\em Annalen der Physik}, 17:549--560, 1905.
 
 \bibitem{goodman}
 Joseph~W. Goodman.
 \newblock {\em Introduction to Fourier Optics}.
 \newblock Roberts and Company Publishers, 4th edition, 2017.
 
-\bibitem{shuzi1}
-李俊昌.
-\newblock {\em 衍射计算机及数字全息 上册}.
-\newblock 科学出版社, 1st edition, 2014.
+\bibitem{horowitz1989art}
+Paul Horowitz and Winfield Hill.
+\newblock {\em The Art of Electronics}.
+\newblock Cambridge University Press, 1989.
 
-\bibitem{shuzi2}
-李俊昌.
-\newblock {\em 衍射计算机及数字全息 下册}.
-\newblock 科学出版社, 1st edition, 2014.
+\bibitem{kubo1966}
+Ryogo Kubo.
+\newblock The fluctuation-dissipation theorem.
+\newblock {\em Reports on Progress in Physics}, 29(1):255--284, 1966.
+
+\bibitem{Leighton2024}
+Matthew~P. Leighton and David~A. Sivak.
+\newblock Jensen bound for the entropy production rate in stochastic thermodynamics.
+\newblock {\em Physical Review E}, 109(L012101), 2024.
+
+\bibitem{mandel1995optical}
+Leonard Mandel and Emil Wolf.
+\newblock {\em Optical Coherence and Quantum Optics}.
+\newblock Cambridge University Press, 1995.
+
+\bibitem{Martinez2013}
+Ignacio~A. Martínez, Édgar Roldán, Juan M.~R. Parrondo, and Dmitri Petrov.
+\newblock Effective heating to several thousand kelvins of an optically trapped sphere in a liquid.
+\newblock {\em Physical Review E}, 87(032159), 2013.
+
+\bibitem{Roldan2014}
+É. Roldán, I.~A. Martínez, L.~Dinis, and R.~A. Rica.
+\newblock Measuring kinetic energy changes in the mesoscale with low acquisition rates.
+\newblock {\em Applied Physics Letters}, 104(23):234103, 2014.
+
+\bibitem{schreiber1999electrical}
+Urs Schreiber and Hans-Gert Kahle.
+\newblock Electrical noise in signal generation and measurement.
+\newblock {\em Measurement Science and Technology}, 10(5):430--439, 1999.
+
+\bibitem{uhlenbeck1930}
+G.~E. Uhlenbeck and L.~S. Ornstein.
+\newblock On the theory of the brownian motion.
+\newblock {\em Physical Review}, 36(5):823--841, 1930.
 
 \end{thebibliography}
