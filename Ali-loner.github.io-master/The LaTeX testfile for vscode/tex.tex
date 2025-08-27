@@ -393,40 +393,46 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2~$\mu$m，20
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{完整实验装置.jpg}
-    \label{fig:完整实验装置}
     \caption{实验装置示意图}
+    \label{fig:allsetup}
 \end{figure}
 \chapter{实验内容}
 
 \section{验证不同粒子直径的小球是布朗运动}
 \subsection{实验步骤}
-\begin{enumerate}
-  \item 搭建光路，开启 LED 光源，将分辨率板放在夹具上进行标定。
-  \item 配制适当浓度的不同直径、不同液体粘度的聚苯乙烯（PS）微球。
-  \item 将溶液加入比色皿中，放在夹具上静置 0.5--1 h。
-  \item 开启 LED，观察 PS 微球，待稳定时收集数据。
-  \item 将比色皿取下，拍摄背景图片。
-  \item 进行数据处理。
-\end{enumerate}
+1.按照图~\ref{fig:sets}搭建光路，开启 LED 光源，保证LED光经过聚光镜后均匀照射在比色皿（或分辨率板）上，
+固定好LED，显微物镜，和CCD相机后，将分辨率板放在夹具上进行标定实验。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验示意图.png}
+    \caption{实验装置示意图}
+    \label{fig:sets}
+\end{figure} 
+2.配制适当浓度的不同直径、不同液体粘度的聚苯乙烯（PS）微球。\par
+3.将溶液加入比色皿中，放在夹具上静置 0.5--1 h。\par
+4.开启 LED，观察 PS 微球，待稳定时收集数据。\par
+5.将比色皿取下，拍摄背景图片。\par
+6.进行数据处理。\par
+
 \subsection{数据处理}
 
 \section{验证不同噪声强度下的布朗运动}
 
 \section{不同噪声下的布朗运动}
 \subsection{实验步骤}
-\begin{enumerate}
-  \item 使用前面搭建的光路，开启 LED 光源，将分辨率板放在夹具上进行标定。
-  \item 配制适当浓度、直径为 500 nm 的聚苯乙烯（PS）微球。
-  \item 剪取两片铜片作为电极，使用无水乙醇清洗后晾干。
-  \item 将溶液加入比色皿中，放在夹具上，将铜片电极清洗后插入比色皿；连接信号发生器并保证铜片平行紧贴两侧，静置 0.5--1 h。
-  \item 开启 LED，观察 PS 微球，待稳定时依次加不同振幅（0--10 V）的电压，收集数据。
-  \item 将比色皿取下，拍摄背景图片。
-  \item 进行数据处理。
-\end{enumerate}
+1.使用前面搭建的光路(图~\ref{fig:allsetup})，开启 LED 光源，将分辨率板放在夹具上进行标定。\par
+2.配制适当浓度、直径为 500 nm 的聚苯乙烯（PS）微球。\par
+3.剪取两片铜片作为电极，使用无水乙醇清洗后晾干。\par
+4.将溶液加入比色皿中，放在夹具上，将铜片电极清洗后插入比色皿；连接信号发生器并保证铜片平行紧贴两侧，静置 0.5--1 h。\par
+5.开启 LED，观察 PS 微球，待稳定时依次加不同振幅（0--10 V）的电压，收集数据。\par
+6.将比色皿取下，拍摄背景图片。\par
+7.进行数据处理。\par
 \section{熵产生率估算}
 
 \section{注意事项}
-
+（1）.每次使用完微量移液器，比色皿和电极片需要用无水乙醇清洗干净，防止污染。\par
+（2）.实验过程中，尽量避免振动和气流对比色皿的影响。\par
+（3）.待每次采集微球的运动数据后，需尽快移走比色皿并保持其他部分装置不动和CCD曝光时间相同，尽快拍摄背景图片 \par
 \chapter{误差分析}
 \chapter{结论与展望}
 
@@ -606,8 +612,6 @@ def calculate_basic_statistics(trajectories):
 \end{lstlisting}
 
 \section{实验数据}
-
-\section{}
 
 \addcontentsline{toc}{chapter}{参考文献} % 手动加到目录
 \bibliographystyle{plain}
