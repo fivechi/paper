@@ -598,7 +598,7 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 代入数据，其中 $q = 1.6\times 10^{-17}$（100 个电荷），$\alpha = 13\%$，$d_0 = 1.2\,\mathrm{cm}$。  
 二次函数的拟合参数为 $8.648\times 10^{-16}$，与实际值 $8.516\times 10^{-16}$ 对比，  
 最终误差为 $1.6\%$。
-
+\newpage
 \section{注意事项}
 （1）每次使用完微量移液器，比色皿和电极片需要用无水乙醇清洗干净，防止污染。\par
 （2）实验过程中，不要随意走动或在试验台上进行其他操作，尽量避免振动和气流对比色皿的影响。\par
@@ -610,8 +610,11 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 \section{误差来源分析}
 （1）在进行分辨率板的标定实验中，虽然我们确定了当分辨率板位于物镜工作平面时，相机每个像素对应的距离，但是在将分辨率板换为比色皿时，
 由于比色皿的厚度与分辨率板的厚度并不相同，且无法保证视野内观察到比色皿中的微球。此时，需要前后稍微移动物镜来使视野内有我们想要观察的PS微球。 \par
-（2）配制甘油与水的混合比例时，取一定量的水和甘油时会引入误差。
-（3）
+（2）配制甘油与水的混合比例时，取一定量的水和甘油时会引入误差。\par
+（3）微球的浓度分布也会造成误差：微球浓度过高可能导致重叠或遮挡，浓度过低则统计样本不足；溶液未充分混合或存在团聚会影响扩散行为的代表性。\par
+（4）由于电极的宽度只有2mm，因此电极加载的电场会由于边缘效应而不均匀，电极未完全平行或紧贴比色皿壁，导致电场分布不均匀，影响等效温度实验的电压控制效果。\par
+（5）采集的粒子数量和时间有限，统计平均值可能与真实值有偏差。我们计算的物理量是基于统计平均的，因此对于有限的数据量，会由于随机性等产生误差。\par
+（6）不同的粒子识别算法与追踪算法也会带来误差，而且在图像中，粒子边缘模糊或多个粒子重叠会导致识别错误。\par
 
 \chapter{结论与展望}
 \section{实验结论}
@@ -651,30 +654,83 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
     \caption{离轴全息实验装置}
     \label{fig:lizhouholo}
 \end{figure}
+\subsection{离轴全息的原理与重建}
+离轴全息（Off-axis Holography）是一种通过在记录过程中引入参考光与物光的倾斜干涉来实现像分离的数字全息方法。
+其核心思想是在探测面上形成包含物光波前信息的干涉条纹，并通过空间频域滤波提取所需的复振幅信息，
+从而实现三维波场的数值重建。下面简要地给出原理，更多与全息和计算全息相关的内容可参考\cite{goodman,shuzi1,shuzi2}
+\subsubsection{原理}
+设物光复振幅为 $O(x,y)$，参考光复振幅为
+\begin{equation}
+R(x,y) = A_r e^{i 2\pi (f_x x + f_y y)},
+\end{equation}
+其中 $A_r$ 为参考光幅值，$f_x, f_y$ 为由倾斜角决定的空间频率分量。干涉强度分布可表示为
+\begin{equation}
+I(x,y) = |O(x,y) + R(x,y)|^2 = |O(x,y)|^2 + |A_r|^2 + O(x,y) R^*(x,y) + O^*(x,y) R(x,y),
+\end{equation}
+其中第三项和第四项分别为携带物光复振幅信息的正、共轭像调制项。
 
+由于参考光与物光具有一定倾斜角，$O(x,y) R^*(x,y)$ 和 $O^*(x,y) R(x,y)$ 在频域中被移至原点两侧，不同于零频项 $|O|^2 + |A_r|^2$，从而可在频谱平面中利用带通滤波选取目标像的频谱区域，抑制共轭像与零级像的干扰。
+其示意图如图~\ref{fig:lizhoushiyi}所示：
 \begin{figure}[H]
     \centering
-    % 每行 2 张
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{不同比例.png}
-        \caption{甘油与水不同比例}
-    \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{不同电压.png}
-        \caption{加载不同电压}
-    \end{subfigure}
-
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{不同波形.png}
-        \caption{加载不同波形}
-    \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{不同粒子直径.png}
-        \caption{不同粒子直径}
-    \end{subfigure}
-
-    \caption{实验相关数据}
+    \includegraphics[width=0.9\textwidth]{离轴示意图.jpg}
+    \caption{离轴全息示意图}
+    \label{fig:lizhoushiyi}
 \end{figure}
+\subsubsection{重建}
+首先对干涉图 $I(x,y)$ 进行二维傅里叶变换：
+\begin{equation}
+\mathcal{F}\{I(x,y)\} = \mathcal{F}\{|O|^2 + |A_r|^2\} + \mathcal{F}\{O R^*\} + \mathcal{F}\{O^* R\},
+\end{equation}
+通过滤波保留所需的 $\mathcal{F}\{O R^*\}$ 项并进行逆傅里叶变换，可得到物光的复振幅分布（除去已知参考光相位）：
+\begin{equation}
+O'(x,y) = \mathcal{F}^{-1} \left[ \mathcal{F}\{I(x,y)\} \cdot H(f_x,f_y) \right],
+\end{equation}
+其中 $H(f_x,f_y)$ 为空间频域带通滤波器。若需将物平面重构到某一距离 $z$，可利用菲涅尔衍射积分进行数值传播：
+\begin{equation}
+U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt{\frac{1}{\lambda^2} - f_x^2 - f_y^2}} \right\},
+\end{equation}
+其中 $\lambda$ 为波长，$f_x,f_y$ 为空间频率坐标。
+
+该方法通过频域分离实现单次拍摄下的相位重建，具有结构简单、计算高效、适应性强等优点，广泛应用于显微成像、位相测量及动态过程监测等领域。
+\subsection{目前的成果}
+目前我们已经可以拍摄分辨率板的离轴全息图并通过算法重建并计算物体距离收集位置的距离z，下面是我们拍摄到的一些全息图：
+\begin{figure}[H]
+    \centering
+    % 每行 3 张
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{lizhou1.jpg}
+        \caption{分辨率板1}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{lizhou2.jpg}
+        \caption{分辨率板2}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{lizhou3.jpg}
+        \caption{分辨率板3}
+    \end{subfigure}
+
+    \caption{拍摄到的全息图}
+\end{figure}
+通过算法重建并确定z的过程如下图所示：
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{离轴1分辨率板.jpg}
+    \caption{重建1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{离轴2分辨率板.jpg}
+    \caption{重建2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{离轴3分辨率板.jpg}
+    \caption{重建3}
+\end{figure}
+可以看到已经能够根据全息图进行重建，但是目前的光路无法达到重建我们实验中想要观察的0.5~5$\mu $m的透明微球，因此我们后续的工作方向就是
+搭建可以实现显微作用的离轴全息光路并设计优化目前确定z的方法。
 \chapter{附录}
 \section{有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}
 \subsection*{一、分析目的}

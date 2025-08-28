@@ -24,16 +24,20 @@
 \contentsline {subsection}{\numberline {5.2.1}不同直径粒子的均方位移（MSD）}{18}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}不同粒子直径，不同粘度溶液中的均方位移（MSD）}{19}{subsection.5.2.2}%
 \contentsline {section}{\numberline {5.3}计算等效温度与扩散系数的拟合}{20}{section.5.3}%
-\contentsline {section}{\numberline {5.4}注意事项}{23}{section.5.4}%
+\contentsline {section}{\numberline {5.4}注意事项}{24}{section.5.4}%
 \contentsline {chapter}{\numberline {6}误差分析}{25}{chapter.6}%
 \contentsline {section}{\numberline {6.1}误差来源分析}{25}{section.6.1}%
-\contentsline {section}{\numberline {6.2}定量计算}{25}{section.6.2}%
 \contentsline {chapter}{\numberline {7}结论与展望}{26}{chapter.7}%
 \contentsline {section}{\numberline {7.1}实验结论}{26}{section.7.1}%
 \contentsline {section}{\numberline {7.2}未来展望}{27}{section.7.2}%
-\contentsline {chapter}{\numberline {8}附录}{28}{chapter.8}%
-\contentsline {section}{\numberline {8.1}有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}{28}{section.8.1}%
-\contentsline {section}{\numberline {8.2}人员分工}{30}{section.8.2}%
-\contentsline {section}{\numberline {8.3}部分代码展示}{30}{section.8.3}%
-\contentsline {section}{\numberline {8.4}实验数据}{35}{section.8.4}%
-\contentsline {chapter}{参考文献}{35}{figure.caption.33}%
+\contentsline {subsection}{\numberline {7.2.1}离轴全息}{27}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}离轴全息的原理与重建}{27}{subsection.7.2.2}%
+\contentsline {subsubsection}{原理}{28}{section*.22}%
+\contentsline {subsubsection}{重建}{28}{section*.24}%
+\contentsline {subsection}{\numberline {7.2.3}目前的成果}{29}{subsection.7.2.3}%
+\contentsline {chapter}{\numberline {8}附录}{31}{chapter.8}%
+\contentsline {section}{\numberline {8.1}有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}{31}{section.8.1}%
+\contentsline {section}{\numberline {8.2}人员分工}{33}{section.8.2}%
+\contentsline {section}{\numberline {8.3}部分代码展示}{33}{section.8.3}%
+\contentsline {section}{\numberline {8.4}实验数据}{38}{section.8.4}%
+\contentsline {chapter}{参考文献}{38}{figure.caption.41}%
