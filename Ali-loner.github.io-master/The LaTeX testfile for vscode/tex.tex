@@ -612,7 +612,6 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 由于比色皿的厚度与分辨率板的厚度并不相同，且无法保证视野内观察到比色皿中的微球。此时，需要前后稍微移动物镜来使视野内有我们想要观察的PS微球。 \par
 （2）配制甘油与水的混合比例时，取一定量的水和甘油时会引入误差。
 （3）
-\section{定量计算}
 
 \chapter{结论与展望}
 \section{实验结论}
@@ -644,6 +643,38 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 
 其次，在实验层面，可通过引入更高分辨率的测量手段（如高速相机、三维轨迹跟踪技术），精确刻画粒子的瞬时速度分布与轨迹涨落，以验证理论模型在更细尺度下的适用性。
 
+\subsection{离轴全息}
+我们计划在实验层面引入更高分辨率的测量手段————离轴全息。目前我们已经实现了如图~\ref{fig:lizhouholo}的离轴全息光路搭建。\par
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{expreiment.jpg}
+    \caption{离轴全息实验装置}
+    \label{fig:lizhouholo}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    % 每行 2 张
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{不同比例.png}
+        \caption{甘油与水不同比例}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{不同电压.png}
+        \caption{加载不同电压}
+    \end{subfigure}
+
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{不同波形.png}
+        \caption{加载不同波形}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{不同粒子直径.png}
+        \caption{不同粒子直径}
+    \end{subfigure}
+
+    \caption{实验相关数据}
+\end{figure}
 \chapter{附录}
 \section{有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}
 \subsection*{一、分析目的}
