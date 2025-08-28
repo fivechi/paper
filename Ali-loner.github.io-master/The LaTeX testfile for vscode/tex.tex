@@ -185,6 +185,7 @@ v(t) = \frac{1}{m} \int_{-\infty}^{t} e^{-\frac{\gamma}{m}(t-\tau)} \eta(\tau) \
 代入上式便得到修正后的有效温度
 \begin{equation}
 T_{\text{kin}} = T_w + \frac{\sigma^2}{2k_B \gamma}.
+\label{eq:Teff}
 \end{equation}\par
 这一结果揭示：\textbf{外部随机力会等效提高布朗粒子的有效动能温度}。其增加量与噪声强度平方 $\sigma^2$ 成正比，与摩擦系数 $\gamma$ 成反比。
 这一现象已在实验中得到验证，例如 Martínez 等 \cite{Martinez2013} 利用电场噪声显著提高了布朗球的动能温度，Roldán 等 \cite{Roldan2014}
@@ -228,7 +229,6 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
 \section{布朗运动及 MSD 与时间 $t$ 的线性关系验证}
 
 对于一个半径 $0.5~\mu\text{m}$ 的粒子，在 $20^\circ$C 水溶液中做布朗运动时，其轨迹如图所示：
-
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.9\textwidth]{trajectory.png}
@@ -284,6 +284,7 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
 当引入噪声时，扩散系数随 $\sigma$ 的变化关系可表示为
 \begin{equation}
   D = D_0 + k\sigma^2,
+  \label{eq:D_sigma}
 \end{equation}
 其中 $D_0$ 为无外加噪声时的扩散系数，$k$ 为拟合系数。因此，$D$ 与 $\sigma$ 呈二次曲线关系。
 
@@ -310,7 +311,7 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
 
 实验所用主要仪器如下：
 分辨率板为 USAF 1951；100$\times$ 物镜（SOPTOP，NA = 0.80，工作距离 2~mm，有限远校正）；
-CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2~$\mu$m，20~fps；信号发生器型号为固纬 AFG-2225。
+CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，20~fps；信号发生器型号为固纬 AFG-2225。
 \begin{figure}[htbp]
     \centering
     % 每行 4 张
@@ -324,7 +325,7 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2~$\mu$m，20
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
         \includegraphics[width=\linewidth]{比色皿.jpg}
-        \caption{比色皿}
+        \caption{比色皿与样品}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
         \includegraphics[width=\linewidth]{微量进样器.jpg}
@@ -398,45 +399,334 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2~$\mu$m，20
 \end{figure}
 \chapter{实验内容}
 
-\section{验证不同粒子直径的小球是布朗运动}
+\section{实验操作}
 \subsection{实验步骤}
-1.按照图~\ref{fig:sets}搭建光路，开启 LED 光源，保证LED光经过聚光镜后均匀照射在比色皿（或分辨率板）上，
-固定好LED，显微物镜，和CCD相机后，将分辨率板放在夹具上进行标定实验。
+1.按照图~\ref{fig:allsetup}搭建光路，其示意图如图~\ref{fig:sets}所示，开启 LED 光源，保证LED光经过聚光镜后均匀照射在比色皿（或分辨率板）上，
+固定好LED，显微物镜，和CCD相机后，进行标定实验。
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{实验示意图.png}
     \caption{实验装置示意图}
     \label{fig:sets}
 \end{figure} 
-2.配制适当浓度的不同直径、不同液体粘度的聚苯乙烯（PS）微球。\par
-3.将溶液加入比色皿中，放在夹具上静置 0.5--1 h。\par
-4.开启 LED，观察 PS 微球，待稳定时收集数据。\par
+标定实验：首先将分辨率板放在夹具上，打开LED，将CCD放在物镜后适当位置，前后调整物镜以使分辨率板的图像变得清晰可见，如下图~\ref{fig:biaoding}
+\begin{figure}[H]
+    \centering
+    % 每行 2 张
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{标定装置.jpg}
+        \caption{装置图}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{标定.jpg}
+        \caption{拍摄到的部分分辨率板}
+    \end{subfigure}
+
+    \caption{标定}
+    \label{fig:biaoding}
+\end{figure}
+2.配制适当浓度的不同直径（0.5~$\mu$m，2~$\mu$m，5~$\mu$m）、不同液体粘度（甘油与去离子水的混合）的聚苯乙烯（PS）微球。\par
+剪取两片铜片作为电极，使用无水乙醇清洗后晾干。\par
+3.将溶液加入比色皿中，放在夹具上静置 0.5--1 h。\\ 
+\quad \textbullet\ 对于验证布朗运动的实验，无需插入电极、连接信号发生器等操作。 \\
+\quad \textbullet\ 对于验证等效温度与扩散系数的拟合实验，插入电极并连接信号发生器，保持电极平行紧贴两侧。\par
+4.开启 LED，观察 PS 微球，待稳定时收集数据（对于验证等效温度与扩散系数的拟合实验，在稳定后需要控制信号发生器
+依次加载0--10V的电压，然后收集数据）。\par
 5.将比色皿取下，拍摄背景图片。\par
-6.进行数据处理。\par
-
+6.进行数据处理，计算相关物理量。\par
 \subsection{数据处理}
+首先，使用附录~\ref{code:searchforparticles}的python代码对采集到的视频进行处理，提取出每一帧图像，并使用trackpy库对每一帧图像进行粒子检测，得到每一帧中所有粒子的坐标信息。\par
+接着，对所有帧中的粒子进行追踪，得到每个粒子的轨迹信息。然后使用自定义的过滤函数对轨迹数据进行过滤，去除静止不动的粒子和短轨迹粒子，得到干净的轨迹数据。 \par
+最后，使用附录~\ref{code:calculate}计算每个粒子的均方位移（MSD），并对所有粒子的MSD进行平均，得到最终的MSD数据。对MSD数据进行拟合得到扩散系数等物理量。\par
+\section{MSD与时间t的线性关系验证}
+首先根据前面处理得到的MSD数据绘制MSD与时间t的关系图，并对数据进行线性拟合(只取0-1s的数据进行拟合，具体的原因详见附录：有效拟合区间的选取与图~\ref{fig:let1}。对于本实验可以得到只有在0-1s内才是误差可接受的范围。后续没有特殊说明时，拟合MSD均取0-1s)，
+验证MSD与时间t的线性关系。 \par
+\subsection{不同直径粒子的均方位移（MSD）}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{实验数据拟合1.jpg}
+  \caption{不同粒径的实验MSD与拟合曲线以及局部放大图，以及扩散系数}
+  \label{fig:fit1}
+\end{figure}
+得到上面的拟合数据后，可以将实验所得的扩散系数与理论值进行对比。根据
+\begin{equation}
+    D = \frac{k_B T}{6 \pi \eta r},
+\end{equation}
+在其他条件不变的情况下，粒子直径越大，其扩散系数越小。通过对不同粒径布朗粒子在前段较稳定的 MSD 进行拟合，可以发现三种粒子的扩散系数满足
+\[
+    D_{0.5} > D_{2.0} > D_{5.0}.
+\]
+下面是实验计算得到的MSD与理论值的对比：
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{对比1.jpg}
+  \caption{不同粒径粒子的MSD对比}
+  \label{fig:fitall1}
+\end{figure}
+\newpage
+\subsection{不同粒子直径，不同粘度溶液中的均方位移（MSD）}
+我们分别配制了不同比例（）的甘油与去离子水混合溶液，测量了不同粘度下2~$\mu$m和0.5~$\mu$m的MSD，并对数据进行拟合：\par
+\begin{figure}[H]
+    \centering
+    % 每行 2 张
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{实验数据拟合2.jpg}
+        \caption{2~$\mu$m的粒子在不同粘度溶液中的MSD}
+        \label{fig:fit2}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{实验数据拟合3.jpg}
+        \caption{0.5~$\mu$m的粒子在不同粘度溶液中的MSD}
+        \label{fig:fit3}
+    \end{subfigure}
 
-\section{验证不同噪声强度下的布朗运动}
+    \caption{实验数据拟合}
+\end{figure}
+与前面类似，依旧可以得到不同粘度下的扩散系数，并与理论值进行对比：
+\begin{figure}[H]
+    \centering
+    % 每行 2 张
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{对比2.jpg}
+        \caption{2~$\mu$m的粒子的MSD对比}
+        \label{fig:fitall2}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{对比3.jpg}
+        \caption{0.5~$\mu$m粒子的MSD对比}
+        \label{fig:fitall3}
+    \end{subfigure}
 
-\section{不同噪声下的布朗运动}
-\subsection{实验步骤}
-1.使用前面搭建的光路(图~\ref{fig:allsetup})，开启 LED 光源，将分辨率板放在夹具上进行标定。\par
-2.配制适当浓度、直径为 500 nm 的聚苯乙烯（PS）微球。\par
-3.剪取两片铜片作为电极，使用无水乙醇清洗后晾干。\par
-4.将溶液加入比色皿中，放在夹具上，将铜片电极清洗后插入比色皿；连接信号发生器并保证铜片平行紧贴两侧，静置 0.5--1 h。\par
-5.开启 LED，观察 PS 微球，待稳定时依次加不同振幅（0--10 V）的电压，收集数据。\par
-6.将比色皿取下，拍摄背景图片。\par
-7.进行数据处理。\par
-\section{熵产生率估算}
+    \caption{实验数据拟合}
+\end{figure}
+
+\section{计算等效温度与扩散系数的拟合}
+对于加载不同噪声强度的实验，我们以0.5~$\mu$m的粒子为例，
+0.5微米ps球在不同电压下经过30秒布朗运动的x方向位移测算，得到x方向MSD数据如图所示，可见整体上随着电压增大，小球的总体MSD呈现增大趋势。分别以0v和10v为例，它们的粒子x方向位移随时间t的关系为：\par
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{粒子1.jpg}
+        \caption{0.5$\mu$m无噪声}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{粒子2.jpg}
+        \caption{0.5~$\mu$m10v噪声}
+    \end{subfigure}
+
+    \caption{实验数据拟合}
+\end{figure}
+在实验中，我们分别设置噪声强度为0--10v，电压间隔为2v，测量了不同噪声强度下0.5~$\mu$m粒子的MSD，如图所示：\par
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{不同噪声强度下的MSD.jpg}
+    \caption{不同噪声强度下的MSD}
+    \label{fig:msdnoise}
+\end{figure}
+分别对这些 MSD 取稳定的前 30 个点进行数据拟合，即$\text{MSD} = 2Dt$
+的线性拟合，得到斜率之间的关系如图所示。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{不同噪声强度下的扩散系数.jpg}
+    \caption{不同噪声强度下的扩散系数}
+    \label{fig:diffusionnoise}
+\end{figure}
+汇总扩散系数D拟合结果,同时根据\eqref{eq:Teff}我们也可以计算有效温度随电压的变化：
+\begin{table}[H]
+    \centering
+    \caption{不同电压下的扩散系数对比}
+    \begin{tabular}{cccc}
+        \toprule
+        电压 & $D$ 拟合值 (m$^2$/s) & $D$ 理论值 (m$^2$/s) & 误差 (\%) \\
+        \midrule
+        0V  & $9.885 \times 10^{-13}$ & $9.871 \times 10^{-13}$ & 0.14 \\
+        2V  & $9.994 \times 10^{-13}$ & $9.871 \times 10^{-13}$ & 1.24 \\
+        4V  & $1.010 \times 10^{-12}$ & $9.871 \times 10^{-13}$ & 2.36 \\
+        6V  & $1.020 \times 10^{-12}$ & $9.871 \times 10^{-13}$ & 3.38 \\
+        8V  & $1.051 \times 10^{-12}$ & $9.871 \times 10^{-13}$ & 6.52 \\
+        10V & $1.075 \times 10^{-12}$ & $9.871 \times 10^{-13}$ & 8.92 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{不同电压下的动能温度与温升}
+    \begin{tabular}{ccc}
+        \toprule
+        电压 (V) & $T_{\text{kin}}$ (K) & $\Delta T$ (K) \\
+        \midrule
+        0  & 300.42 & 0.42 \\
+        2  & 303.73 & 3.73 \\
+        4  & 306.95 & 6.95 \\
+        6  & 309.99 & 9.99 \\
+        8  & 319.41 & 19.41 \\
+        10 & 326.71 & 26.71 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{温度.jpg}
+    \caption{有效温度随电压的变化趋势}
+    \label{fig:trends}
+\end{figure}
+对于有效温度：\\
+理论斜率：$a_{\text{theory}} = 2.596 \times 10^{-1} \ \text{K}/\text{V}^2$ \\ 
+实验斜率：$a_{\text{experimental}} = 2.546 \times 10^{-1} \ \text{K}/\text{V}^2$ \\ 
+相对误差：$= 1.90\%$\par
+根据公式\eqref{eq:D_sigma}，D和V之间应该满足二次关系。对D和V作图，进行$D = D_0 + kV^2$的二次拟合，得到拟合后的参数。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{二次拟合.jpg}
+    \caption{扩散系数随电压的二次函数关系}
+    \label{fig:fit2V}
+\end{figure}
+我们可以得知
+\begin{equation}
+    D = D_0 + \frac{\sigma^2}{(2\gamma)^2},
+\end{equation}
+又有
+\begin{equation}
+    \sigma = \frac{|q|}{d_0}\,\alpha V,
+\end{equation}
+其中$\gamma = 6 \pi \eta r$是摩擦系数， $\alpha$ 是实验中用于修正的参数，即小球由于种种原因没有感受到理想状态下的电压。  
+因此，真正的 $D\!-\!V^2$ 参数应为
+\begin{equation}
+    \frac{q^2 \alpha^2}{2 \gamma^2 d_0^2}.
+\end{equation}
+
+代入数据，其中 $q = 1.6\times 10^{-17}$（100 个电荷），$\alpha = 13\%$，$d_0 = 1.2\,\mathrm{cm}$。  
+二次函数的拟合参数为 $8.648\times 10^{-16}$，与实际值 $8.516\times 10^{-16}$ 对比，  
+最终误差为 $1.6\%$。
 
 \section{注意事项}
-（1）.每次使用完微量移液器，比色皿和电极片需要用无水乙醇清洗干净，防止污染。\par
-（2）.实验过程中，尽量避免振动和气流对比色皿的影响。\par
-（3）.待每次采集微球的运动数据后，需尽快移走比色皿并保持其他部分装置不动和CCD曝光时间相同，尽快拍摄背景图片 \par
+（1）每次使用完微量移液器，比色皿和电极片需要用无水乙醇清洗干净，防止污染。\par
+（2）实验过程中，不要随意走动或在试验台上进行其他操作，尽量避免振动和气流对比色皿的影响。\par
+（3）待每次采集微球的运动数据后，需尽快移走比色皿并保持其他部分装置不动和CCD曝光时间相同，尽快拍摄背景图片 \par
+（4）在使用信号发生器加载不同幅度的噪声时，需要确保电极是紧贴着内壁两侧。且加载电压要从0v逐渐增加到10v，而不能从10v逐渐降低电压
+至0v，防止微球先收到高电压的噪声未经静置而影响后续MSD的计算。\par
+（5）在进行分辨率板的标定实验后，需要固定其他剩余的实验装置，尤其是100x物镜和CCD的相对位置，以保证标定分辨率板后的像素尺寸不会发生变化。\par
 \chapter{误差分析}
+\section{误差来源分析}
+（1）在进行分辨率板的标定实验中，虽然我们确定了当分辨率板位于物镜工作平面时，相机每个像素对应的距离，但是在将分辨率板换为比色皿时，
+由于比色皿的厚度与分辨率板的厚度并不相同，且无法保证视野内观察到比色皿中的微球。此时，需要前后稍微移动物镜来使视野内有我们想要观察的PS微球。 \par
+（2）配制甘油与水的混合比例时，取一定量的水和甘油时会引入误差。
+（3）
+\section{定量计算}
+
 \chapter{结论与展望}
+\section{实验结论}
+本实验构建了一个由外加可控电噪声驱动的布朗粒子系统，实现了对于外加电噪声的完全调控，为研究非平衡统计物理中的能量耗散与熵产生提供了实验平台。实验内容主要围绕以下几个方面展开：\\
+
+首先，在理论层面，我们基于朗之万方程推导了外部噪声作用下的有效动能温度与扩散系数修正关系。结果表明，外加随机力等效地提高了布朗粒子的动能温度，其贡献量与噪声强度的平方成正比，与阻尼系数成反比。
+这一结论不仅与已有实验研究相符 \cite{Martinez2013,Roldan2014}，也为解释实验中温度随电压增大的趋势提供了理论依据。同时，修正后的扩散系数公式揭示了外部噪声对系统弛豫行为和熵产生率下界的重要影响 \cite{Leighton2024}。\par
+
+其次，在实验操作方面，我们搭建了垂直放置样品的观测平台，可以对更大的微粒进行布朗运动等相关的研究而不会受到容器壁对微粒的干扰，
+并采用非相干光源与高倍显微镜结合 CCD 成像的方法，对微球的布朗运动进行了精确测量。通过信号发生器引入 0--10V 的可调电噪声，实现了对非平衡驱动强度的连续调控。\par
+
+在实验结果方面：\par
+\begin{itemize}
+    \item 对不同粒径粒子与不同粘度环境的 MSD 数据拟合表明，实验测得的扩散系数与理论值符合良好，验证了 $D \propto 1/r$ 与 $D \propto 1/\eta$ 的依赖关系。
+    \item 在外加噪声作用下，0.5~$\mu$m 粒子的 MSD 随电压升高整体呈增大趋势。对 MSD 的前 30 个点进行线性拟合，得到了不同电压下的扩散系数，并计算了相应的动能温度。
+    \item 扩散系数 $D$ 与电压平方 $V^2$ 的关系符合二次函数形式，拟合参数与理论值的相对误差为 $1.6\%$，表明理论模型与实验观测高度一致。
+    \item 动能温度的实验斜率与理论斜率的差异仅为 $1.9\%$，进一步验证了外部随机驱动等效加热效应的可靠性。
+\end{itemize}
+
+综上所述，本实验不仅在定性上验证了外部噪声对布朗粒子动力学的调控作用，也在定量上通过 MSD 与扩散系数的拟合展示了理论与实验的高度一致性。这些结果为深入理解非平衡体系中的温度涌现机制、扩散行为重构以及熵产生过程提供了有力的实验支撑，
+同时也展示了基于电噪声驱动的布朗实验平台在非平衡统计物理研究中的应用潜力。
+
+\section{未来展望}
 
 \chapter{附录}
+\section{有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}
+\subsection*{一、分析目的}
+
+研究粒子运动的均方位移（Mean Squared Displacement, MSD）随延迟时间 $\Delta t$ 的变化关系，并结合理论误差模型评估测量结果的可靠性。通过绘制 MSD 曲线及其误差带，确定有效分析的时间范围（即统计误差小于 10\% 的区间），为后续扩散行为分析提供依据。
+
+\subsection*{二、理论原理}
+\subsubsection*{1. 均方位移（MSD）}
+均方位移是描述粒子扩散行为的重要物理量，定义为：
+\[
+\text{MSD}(k) = \langle |\vec{r}(t + k\Delta t) - \vec{r}(t)|^2 \rangle
+\]
+其中：
+\begin{itemize}
+    \item $k$：延迟步数（lag time）
+    \item $\Delta t$：单步时间间隔
+    \item $\vec{r}(t)$：粒子在时间 $t$ 的位置
+    \item $\langle \cdot \rangle$：对所有起始时间 $t$ 的平均
+\end{itemize}
+在正常扩散中，MSD 与 $\Delta t$ 呈线性关系：
+\[
+\text{MSD} \propto \Delta t
+\]
+\subsubsection*{2. 相对误差模型}
+由于有限轨迹长度，MSD 的估计存在统计误差。定义 $\rho_k = \text{MSD}(k)$，其相对标准偏差为：
+\[
+\frac{\Delta \rho_k}{\langle \rho_k \rangle}
+\]
+根据相关文献内的理论推导\cite{qian1991spt}，该比值可由以下分段函数估算：
+\[
+\frac{\Delta \rho_k^2}{\langle \rho_k \rangle^2} =
+\begin{cases}
+\displaystyle \frac{4(N-k)k^2 + 2(N-k) + k - k^3}{6k(N-k)^2}, & k < \tfrac{N}{2} \\[2ex]
+\displaystyle 1 + \frac{(N-k)^3 - 4(N-k)^2 k + 5k - N}{6k^2(N-k)}, & k \geq \tfrac{N}{2},\; k < N
+\end{cases}
+\]
+其中 $N$ 为轨迹的总帧数。
+
+\subsubsection*{3. 有效分析范围}
+
+设定阈值：当 
+\[
+\frac{\Delta \rho_k}{\langle \rho_k \rangle} < 10\%
+\] 
+时，认为统计误差可接受。通过计算该比值随 $k$ 的变化，确定最大有效延迟步数 $k_{\text{max}}$，对应 $\Delta t_{\text{max}}$。
+
+\subsection*{三、数据处理流程}
+
+\subsubsection*{1. 数据读取}
+
+从 CSV 文件 \texttt{msd\_curve.csv} 中读取两列数据：
+\begin{itemize}
+    \item \texttt{delta\_t}：延迟时间 $\Delta t$（单位：秒）
+    \item \texttt{MSD}：对应延迟时间下的均方位移（单位：$\mu m^2$）
+\end{itemize}
+
+\subsubsection*{2. 参数设置}
+
+\begin{itemize}
+    \item 总帧数 $N = \text{len}(\text{delta\_t})$
+    \item 延迟步数 $k = 1, 2, \dots, N-1$
+\end{itemize}
+
+\subsubsection*{3. 误差比计算}
+
+对每个 $k$ 计算 $\frac{\Delta \rho_k}{\langle \rho_k \rangle}$，并用于构建误差带：
+\[
+\text{上界： } \text{MSD}(k) \times \left(1 + \frac{\Delta \rho_k}{\langle \rho_k \rangle}\right)
+\]
+\[
+\text{下界： } \text{MSD}(k) \times \left(1 - \frac{\Delta \rho_k}{\langle \rho_k \rangle}\right)
+\]
+
+\subsubsection*{4. 确定有效范围}
+
+找到第一个满足 $\frac{\Delta \rho_k}{\langle \rho_k \rangle} \geq 0.1$ 的 $k$ 值，对应 $\Delta t$ 作为红色虚线标注。
+
+通过上述计算模拟得到的图像可以发现：当 
+\[
+\frac{\Delta \rho_k}{\langle \rho_k \rangle} < 10\%
+\]
+时，曲线的线性关系较好（误差可以接受）的位置可以作为有效拟合区间。在本实验中我们取有效拟合区间为前 20 个数据点，即 $\Delta t \approx 1 \ \text{s}$ 附近。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{取1.jpg}
+    \caption{MSD与延迟时间的关系}
+    \label{fig:let1}
+\end{figure}
+
 \section{人员分工}
 \renewcommand{\arraystretch}{1.3} % 表格行距调整
 
@@ -451,9 +741,39 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2~$\mu$m，20
 \bottomrule
 \end{tabularx}
 
-
 \section{部分代码展示}
-\begin{lstlisting}[language=Python, caption=检测微球, label=code:generator]
+\begin{lstlisting}[language=Python, caption=有效拟合区间的选取, label=code:calculate1]
+def calculate_ratio(k, N):
+    if k < N / 2:
+        return (4 * (N - k) * k**2 + 2 * (N - k) + k - k**3) / (6 * k * (N - k)**2)
+    else:
+        return 1 + ((N - k)**3 - 4 * (N - k)**2 * k + 5 * k - N) / (6 * k**2 * (N - k))
+df = pd.read_csv(r'E:\26day\500nm\msd_curve.csv')
+
+# 提取Δt和MSD数据
+delta_t = df['time_lag (s)'].values
+msd_values = df['ensemble_MSD (m^2)'].values
+N = len(delta_t)
+k_values = np.arange(1, N)  # 1, 2, ..., N-1
+
+# 截取前 N-1 个数据点用于绘图（因为 ratio 只能算到 N-1）
+delta_t_plot = delta_t[:N-1]
+msd_plot = msd_values[:N-1]
+
+# 计算 ratio 值
+ratio_values = [calculate_ratio(k, N) for k in k_values]
+ratio_array = np.array(ratio_values)
+
+# 计算误差带
+error_band_upper = msd_plot * (1 + ratio_array)
+error_band_lower = msd_plot * (1 - ratio_array)
+
+# 找到第一个 ratio >= 10% 的位置
+threshold_index = np.argmax(ratio_array >= 0.1)
+threshold_dt = delta_t_plot[threshold_index]
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption=检测微球, label=code:searchforparticles]
 def filter_stationary_particles(trajectories, max_displacement=2.0, min_frames=10):
     """
     过滤静止不动的粒子（CCD灰尘）
@@ -536,7 +856,7 @@ def batch_detect_particles(frames, params):
     return combined_features
 \end{lstlisting}
 首先使用上面的代码进行粒子检测和过滤，得到干净的粒子轨迹数据。然后使用下面的代码进行粒子跟踪、可视化和统计分析。\\
-\begin{lstlisting}[language=Python, caption=可视化与计算, label=code:generator]
+\begin{lstlisting}[language=Python, caption=可视化与计算, label=code:calculate]
 def track_particles(features_df, search_range=50, memory=5):
     """跟踪粒子运动轨迹"""
     print("开始粒子跟踪...")
@@ -612,6 +932,47 @@ def calculate_basic_statistics(trajectories):
 \end{lstlisting}
 
 \section{实验数据}
+\begin{figure}[H]
+    \centering
+    % 每行 2 张
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{不同比例.png}
+        \caption{甘油与水不同比例}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{不同电压.png}
+        \caption{加载不同电压}
+    \end{subfigure}
+
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{不同波形.png}
+        \caption{加载不同波形}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{不同粒子直径.png}
+        \caption{不同粒子直径}
+    \end{subfigure}
+
+    \caption{实验相关数据}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    % 每行 3 张
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{0.5um.png}
+        \caption{0.5~$\mu$m粒子}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{2um.png}
+        \caption{2.0~$\mu$m粒子}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{5um.png}
+        \caption{5.0~$\mu$m粒子}
+    \end{subfigure}
+
+    \caption{不同直径粒子拍摄图（已转为灰度图）}
+\end{figure}
 
 \addcontentsline{toc}{chapter}{参考文献} % 手动加到目录
 \bibliographystyle{plain}

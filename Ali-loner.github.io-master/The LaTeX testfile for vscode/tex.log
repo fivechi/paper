@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  27 AUG 2025 21:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  28 AUG 2025 17:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -559,11 +559,7 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 Package hyperref Info: Option `colorlinks' set `true' on input line 24.
  (d:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (./tex.aux
-
-LaTeX Warning: Label `code:generator' multiply defined.
-
-)
+) (./tex.aux)
 \openout1 = `tex.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -694,40 +690,40 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [1] [2] (./tex.toc)
+] [1] [2] (./tex.toc [3
+
+])
 \tf@toc=\write4
 \openout4 = `tex.toc'.
 
- [3
-
-]
+ [4]
 Chapter 1.
-[4
+[5
 
-] [5]
+] [6]
 Chapter 2.
-[6
+[7
 
-] [7] [8]
+] [8] [9]
 Chapter 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 229.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 228.
+(hyperref)                removing `math shift' on input line 229.
 
 File: trajectory.png Graphic file (type bmp)
 <trajectory.png>
 File: displacement.png Graphic file (type bmp)
 <displacement.png>
-[9
+[10
 
 ]
 File: 一维位移.png Graphic file (type bmp)
 <一维位移.png>
- [10]
+ [11]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 282.
@@ -742,7 +738,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 File: fit.png Graphic file (type bmp)
 <fit.png>
-[11]
+[12]
 Chapter 4.
 File: 5.0ml微量离心管.jpg Graphic file (type bmp)
 <5.0ml微量离心管.jpg>
@@ -778,30 +774,78 @@ File: 信号发生器.jpg Graphic file (type bmp)
 <信号发生器.jpg>
 File: 完整实验装置.jpg Graphic file (type bmp)
 <完整实验装置.jpg>
-[12
+[13
 
-] [13] [14]
+] [14] [15]
 Chapter 5.
 File: 实验示意图.png Graphic file (type bmp)
 <实验示意图.png>
-[15
+File: 标定装置.jpg Graphic file (type bmp)
+<标定装置.jpg>
+File: 标定.jpg Graphic file (type bmp)
+<标定.jpg>
+[16
 
-] [16]
+] [17]
+File: 实验数据拟合1.jpg Graphic file (type bmp)
+<实验数据拟合1.jpg>
+File: 对比1.jpg Graphic file (type bmp)
+<对比1.jpg>
+ [18]
+File: 实验数据拟合2.jpg Graphic file (type bmp)
+<实验数据拟合2.jpg>
+File: 实验数据拟合3.jpg Graphic file (type bmp)
+<实验数据拟合3.jpg>
+File: 对比2.jpg Graphic file (type bmp)
+<对比2.jpg>
+File: 对比3.jpg Graphic file (type bmp)
+<对比3.jpg>
+ [19]
+File: 粒子1.jpg Graphic file (type bmp)
+<粒子1.jpg>
+File: 粒子2.jpg Graphic file (type bmp)
+<粒子2.jpg>
+File: 不同噪声强度下的MSD.jpg Graphic file (type bmp)
+<不同噪声强度下的MSD.jpg>
+ [20]
+File: 不同噪声强度下的扩散系数.jpg Graphic file (type bmp)
+<不同噪声强度下的扩散系数.jpg>
+ [21]
+File: 温度.jpg Graphic file (type bmp)
+<温度.jpg>
+ [22]
+File: 二次拟合.jpg Graphic file (type bmp)
+<二次拟合.jpg>
+ [23] [24]
 Chapter 6.
-[17
+[25
 
 ]
 Chapter 7.
-[18
 
-]
-Chapter 8.
+Underfull \hbox (badness 10000) in paragraph at lines 619--620
 
-Overfull \hbox (21.07874pt too wide) in paragraph at lines 452--453
-[][] 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 456.
+[26
+
+] [27]
+Chapter 8.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 641.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Delta' on input line 641.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 641.
+
+[28
+
+]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -825,29 +869,47 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-[19
+File: 取1.jpg Graphic file (type bmp)
+<取1.jpg>
+ [29]
+Overfull \hbox (21.07874pt too wide) in paragraph at lines 742--743
+[][] 
+ []
 
-] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 538--539
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 745.
+[30] [31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 858--859
 
  []
 
-[21] [22] (./tex.bbl [23]) [24
+[33]
+File: 不同比例.png Graphic file (type bmp)
+<不同比例.png>
+File: 不同电压.png Graphic file (type bmp)
+<不同电压.png>
+File: 不同波形.png Graphic file (type bmp)
+<不同波形.png>
+File: 不同粒子直径.png Graphic file (type bmp)
+<不同粒子直径.png>
+File: 0.5um.png Graphic file (type bmp)
+<0.5um.png>
+File: 2um.png Graphic file (type bmp)
+<2um.png>
+File: 5um.png Graphic file (type bmp)
+<5um.png>
+ [34] (./tex.bbl [35] [36
 
-] (./tex.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
+]) [37] (./tex.aux)
 Package rerunfilecheck Info: File `tex.out' has not changed.
-(rerunfilecheck)             Checksum: 0556812C2D98507A28D3D0A67E49B297;2864.
+(rerunfilecheck)             Checksum: 7CA0E5AF8A4B5C91E7FA6D5483368163;3322.
  ) 
 Here is how much of TeX's memory you used:
- 19857 strings out of 478630
- 410710 string characters out of 5847730
- 2218012 words of memory out of 5000000
- 39624 multiletter control sequences out of 15000+600000
+ 20245 strings out of 478630
+ 424571 string characters out of 5847730
+ 2219012 words of memory out of 5000000
+ 39990 multiletter control sequences out of 15000+600000
  532593 words of font info for 147 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 89i,10n,97p,413b,1965s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,13n,97p,413b,1965s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tex.pdf (25 pages).
+Output written on tex.pdf (38 pages).

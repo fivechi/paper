@@ -1,34 +1,39 @@
-\contentsline {chapter}{\numberline {1}实验背景与目的}{4}{chapter.1}%
-\contentsline {section}{\numberline {1.1}实验背景}{4}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}布朗运动}{4}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}扩散系数}{4}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}热学中的噪声理论}{4}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}小结}{5}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}实验目的}{5}{section.1.2}%
-\contentsline {chapter}{\numberline {2}实验原理}{6}{chapter.2}%
-\contentsline {section}{\numberline {2.1}有效动能温度公式推导}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}噪声强度与扩散系数的修正关系}{7}{section.2.2}%
-\contentsline {chapter}{\numberline {3}理论模拟}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}布朗运动及 MSD 与时间 $t$ 的线性关系验证}{9}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}噪声对布朗运动的影响}{10}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}朗之万方程数值模拟与等效温度}{10}{section.3.2}%
-\contentsline {section}{\numberline {3.3}不同 $\sigma $ 下的扩散系数拟合}{11}{section.3.3}%
-\contentsline {chapter}{\numberline {4}装置设计}{12}{chapter.4}%
-\contentsline {section}{\numberline {4.1}实验仪器与设计}{12}{section.4.1}%
-\contentsline {section}{\numberline {4.2}实验装置}{14}{section.4.2}%
-\contentsline {chapter}{\numberline {5}实验内容}{15}{chapter.5}%
-\contentsline {section}{\numberline {5.1}验证不同粒子直径的小球是布朗运动}{15}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}实验步骤}{15}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}数据处理}{16}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}验证不同噪声强度下的布朗运动}{16}{section.5.2}%
-\contentsline {section}{\numberline {5.3}不同噪声下的布朗运动}{16}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}实验步骤}{16}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}熵产生率估算}{16}{section.5.4}%
-\contentsline {section}{\numberline {5.5}注意事项}{16}{section.5.5}%
-\contentsline {chapter}{\numberline {6}误差分析}{17}{chapter.6}%
-\contentsline {chapter}{\numberline {7}结论与展望}{18}{chapter.7}%
-\contentsline {chapter}{\numberline {8}附录}{19}{chapter.8}%
-\contentsline {section}{\numberline {8.1}人员分工}{19}{section.8.1}%
-\contentsline {section}{\numberline {8.2}部分代码展示}{19}{section.8.2}%
-\contentsline {section}{\numberline {8.3}实验数据}{23}{section.8.3}%
-\contentsline {chapter}{参考文献}{23}{section.8.3}%
+\contentsline {chapter}{\numberline {1}实验背景与目的}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}实验背景}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}布朗运动}{5}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}扩散系数}{5}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}热学中的噪声理论}{5}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}小结}{6}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}实验目的}{6}{section.1.2}%
+\contentsline {chapter}{\numberline {2}实验原理}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}有效动能温度公式推导}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}噪声强度与扩散系数的修正关系}{8}{section.2.2}%
+\contentsline {chapter}{\numberline {3}理论模拟}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}布朗运动及 MSD 与时间 $t$ 的线性关系验证}{10}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}噪声对布朗运动的影响}{11}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}朗之万方程数值模拟与等效温度}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}不同 $\sigma $ 下的扩散系数拟合}{12}{section.3.3}%
+\contentsline {chapter}{\numberline {4}装置设计}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}实验仪器与设计}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}实验装置}{15}{section.4.2}%
+\contentsline {chapter}{\numberline {5}实验内容}{16}{chapter.5}%
+\contentsline {section}{\numberline {5.1}实验操作}{16}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}实验步骤}{16}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}数据处理}{17}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}MSD与时间t的线性关系验证}{17}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}不同直径粒子的均方位移（MSD）}{18}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}不同粒子直径，不同粘度溶液中的均方位移（MSD）}{19}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}计算等效温度与扩散系数的拟合}{20}{section.5.3}%
+\contentsline {section}{\numberline {5.4}注意事项}{23}{section.5.4}%
+\contentsline {chapter}{\numberline {6}误差分析}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}误差来源分析}{25}{section.6.1}%
+\contentsline {section}{\numberline {6.2}定量计算}{25}{section.6.2}%
+\contentsline {chapter}{\numberline {7}结论与展望}{26}{chapter.7}%
+\contentsline {section}{\numberline {7.1}实验结论}{26}{section.7.1}%
+\contentsline {section}{\numberline {7.2}未来展望}{27}{section.7.2}%
+\contentsline {chapter}{\numberline {8}附录}{28}{chapter.8}%
+\contentsline {section}{\numberline {8.1}有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}{28}{section.8.1}%
+\contentsline {section}{\numberline {8.2}人员分工}{30}{section.8.2}%
+\contentsline {section}{\numberline {8.3}部分代码展示}{30}{section.8.3}%
+\contentsline {section}{\numberline {8.4}实验数据}{35}{section.8.4}%
+\contentsline {chapter}{参考文献}{35}{figure.caption.33}%
