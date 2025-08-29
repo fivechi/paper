@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  29 AUG 2025 17:11
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  29 AUG 2025 20:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -794,84 +794,29 @@ File: 标定.jpg Graphic file (type bmp)
 [18
 
 ]
-File: 实验数据拟合1.jpg Graphic file (type bmp)
-<实验数据拟合1.jpg>
- [19]
-File: 对比1.jpg Graphic file (type bmp)
-<对比1.jpg>
- [20]
-File: 实验数据拟合2.jpg Graphic file (type bmp)
-<实验数据拟合2.jpg>
-File: 实验数据拟合3.jpg Graphic file (type bmp)
-<实验数据拟合3.jpg>
-File: 对比2.jpg Graphic file (type bmp)
-<对比2.jpg>
-File: 对比3.jpg Graphic file (type bmp)
-<对比3.jpg>
-File: 粒子1.jpg Graphic file (type bmp)
-<粒子1.jpg>
-File: 粒子2.jpg Graphic file (type bmp)
-<粒子2.jpg>
- [21]
-File: 不同噪声强度下的MSD.jpg Graphic file (type bmp)
-<不同噪声强度下的MSD.jpg>
-File: 不同噪声强度下的扩散系数.jpg Graphic file (type bmp)
-<不同噪声强度下的扩散系数.jpg>
- [22]
-File: 温度.jpg Graphic file (type bmp)
-<温度.jpg>
- [23]
-File: 二次拟合.jpg Graphic file (type bmp)
-<二次拟合.jpg>
- [24] [25]
-Chapter 6.
-[26
+File: 说明.jpg Graphic file (type bmp)
+<说明.jpg>
+File: 图片.jpg Graphic file (type bmp)
+<图片.jpg>
+File: 去背景.jpg Graphic file (type bmp)
+<去背景.jpg>
+File: 转灰度.jpg Graphic file (type bmp)
+<转灰度.jpg>
 
-]
-Chapter 7.
-
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
+Underfull \hbox (badness 10000) in paragraph at lines 471--485
 
  []
 
-[27
-
-]
-File: expreiment.jpg Graphic file (type bmp)
-<expreiment.jpg>
- [28]
-File: 离轴示意图.jpg Graphic file (type bmp)
-<离轴示意图.jpg>
-File: lizhou1.jpg Graphic file (type bmp)
-<lizhou1.jpg>
-File: lizhou2.jpg Graphic file (type bmp)
-<lizhou2.jpg>
-File: lizhou3.jpg Graphic file (type bmp)
-<lizhou3.jpg>
- [29]
-File: 离轴1分辨率板.jpg Graphic file (type bmp)
-<离轴1分辨率板.jpg>
-File: 离轴2分辨率板.jpg Graphic file (type bmp)
-<离轴2分辨率板.jpg>
-File: 离轴3分辨率板.jpg Graphic file (type bmp)
-<离轴3分辨率板.jpg>
- [30] [31]
-Chapter 8.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 757.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 757.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 757.
-
-[32
-
-]
+[19]
+File: 识别粒子.jpg Graphic file (type bmp)
+<识别粒子.jpg>
+File: 粒子信息.jpg Graphic file (type bmp)
+<粒子信息.jpg>
+File: 粒子轨迹图.jpg Graphic file (type bmp)
+<粒子轨迹图.jpg>
+ [20]
+File: 计算MSD.jpg Graphic file (type bmp)
+<计算MSD.jpg>
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -895,20 +840,103 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
+File: 计算并拟合.jpg Graphic file (type bmp)
+<计算并拟合.jpg>
+ [21]
+File: 实际示例.jpg Graphic file (type bmp)
+<实际示例.jpg>
+File: 实验数据拟合1.jpg Graphic file (type bmp)
+<实验数据拟合1.jpg>
+ [22]
+File: 对比1.jpg Graphic file (type bmp)
+<对比1.jpg>
+ [23]
+File: 实验数据拟合2.jpg Graphic file (type bmp)
+<实验数据拟合2.jpg>
+File: 实验数据拟合3.jpg Graphic file (type bmp)
+<实验数据拟合3.jpg>
+File: 对比2.jpg Graphic file (type bmp)
+<对比2.jpg>
+File: 对比3.jpg Graphic file (type bmp)
+<对比3.jpg>
+File: 粒子1.jpg Graphic file (type bmp)
+<粒子1.jpg>
+File: 粒子2.jpg Graphic file (type bmp)
+<粒子2.jpg>
+ [24]
+File: 不同噪声强度下的MSD.jpg Graphic file (type bmp)
+<不同噪声强度下的MSD.jpg>
+File: 不同噪声强度下的扩散系数.jpg Graphic file (type bmp)
+<不同噪声强度下的扩散系数.jpg>
+ [25]
+File: 温度.jpg Graphic file (type bmp)
+<温度.jpg>
+ [26]
+File: 二次拟合.jpg Graphic file (type bmp)
+<二次拟合.jpg>
+ [27] [28]
+Chapter 6.
+[29
+
+]
+Chapter 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 710--711
+
+ []
+
+[30
+
+]
+File: expreiment.jpg Graphic file (type bmp)
+<expreiment.jpg>
+ [31]
+File: 离轴示意图.jpg Graphic file (type bmp)
+<离轴示意图.jpg>
+File: lizhou1.jpg Graphic file (type bmp)
+<lizhou1.jpg>
+File: lizhou2.jpg Graphic file (type bmp)
+<lizhou2.jpg>
+File: lizhou3.jpg Graphic file (type bmp)
+<lizhou3.jpg>
+ [32]
+File: 离轴1分辨率板.jpg Graphic file (type bmp)
+<离轴1分辨率板.jpg>
+File: 离轴2分辨率板.jpg Graphic file (type bmp)
+<离轴2分辨率板.jpg>
+File: 离轴3分辨率板.jpg Graphic file (type bmp)
+<离轴3分辨率板.jpg>
+ [33] [34]
+Chapter 8.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 824.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Delta' on input line 824.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 824.
+
+[35
+
+]
 File: 取1.jpg Graphic file (type bmp)
 <取1.jpg>
- [33]
-Overfull \hbox (21.07874pt too wide) in paragraph at lines 858--859
+ [36]
+Overfull \hbox (21.07874pt too wide) in paragraph at lines 925--926
 [][] 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 861.
-[34] [35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 974--975
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 928.
+[37] [38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 1041--1042
 
  []
 
-[37]
+[40]
 File: 不同比例.png Graphic file (type bmp)
 <不同比例.png>
 File: 不同电压.png Graphic file (type bmp)
@@ -923,19 +951,19 @@ File: 2um.png Graphic file (type bmp)
 <2um.png>
 File: 5um.png Graphic file (type bmp)
 <5um.png>
- [38] (./tex.bbl [39] [40
+ [41] (./tex.bbl [42] [43
 
-]) [41] (./tex.aux)
+]) [44] (./tex.aux)
 Package rerunfilecheck Info: File `tex.out' has not changed.
-(rerunfilecheck)             Checksum: DCF247C869B3C9B0153F6D158580BE9E;3251.
+(rerunfilecheck)             Checksum: 45FA8F0F4FFA2D2D3AD3271EF99BB913;3251.
  ) 
 Here is how much of TeX's memory you used:
- 20348 strings out of 478630
- 426788 string characters out of 5847730
+ 20442 strings out of 478630
+ 428012 string characters out of 5847730
  2219012 words of memory out of 5000000
- 40082 multiletter control sequences out of 15000+600000
- 532601 words of font info for 148 fonts, out of 8000000 for 9000
+ 40164 multiletter control sequences out of 15000+600000
+ 535087 words of font info for 158 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  89i,13n,97p,413b,1965s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tex.pdf (42 pages).
+Output written on tex.pdf (45 pages).

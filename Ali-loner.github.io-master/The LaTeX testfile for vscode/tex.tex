@@ -457,16 +457,83 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 5.将比色皿取下，拍摄背景图片。\par
 6.进行数据处理，计算相关物理量。\par
 \subsection{数据处理}
-首先，使用附录~\ref{code:searchforparticles}的python代码对采集到的视频进行处理，提取出每一帧图像，并使用trackpy库对每一帧图像进行粒子检测，得到每一帧中所有粒子的坐标信息。\par
-接着，对所有帧中的粒子进行追踪，得到每个粒子的轨迹信息。然后使用自定义的过滤函数对轨迹数据进行过滤，去除静止不动的粒子和短轨迹粒子，得到干净的轨迹数据。 \par
-最后，使用附录~\ref{code:calculate}计算每个粒子的均方位移（MSD），并对所有粒子的MSD进行平均，得到最终的MSD数据。对MSD数据进行拟合得到扩散系数等物理量。\par
+1. 首先，使用附录~\ref{code:searchforparticles}的python代码对采集到的视频进行处理，提取出每一帧图像，并使用trackpy库对每一帧图像进行粒子检测，得到每一帧中所有粒子的坐标信息：\\
+使用python提取视频，获得每一帧图像：\\
+用python的cv2和os模块，来逐帧截取视频：
+\begin{figure}[H]
+    \includegraphics[width=0.6\textwidth]{说明.jpg}
+\end{figure} 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{图片.jpg}
+    \caption{截取图片}
+\end{figure} 
+背景图像去除防止干扰，增强对比度，并使用标准的RGB转灰度公式将每一帧图片其转换为灰度图像：\\
+\begin{figure}[H]
+    \centering
+    % 每行 2 张
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{去背景.jpg}
+        \caption{去背景}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{转灰度.jpg}
+        \caption{转灰度}
+    \end{subfigure}
+
+    \caption{去背景并转灰度}
+\end{figure}
+2. 对粒子进行识别：\\
+使用trackpy中的locate函数来检测图像中可能的粒子（圆形高斯拟合）
+检测直径比实际例子直径稍大些所对应像素大小的亮/暗粒子（与背景有关）
+包含所有检测到粒子的信息（坐标、强度、椭圆度等）
+使用trackpy中的annotate函数来标注检测到的粒子（可以通过调整minmass参数、maxsize参数和separation参数来限制粒子的强度、例子最大尺寸和粒子间的最小间隔）
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{识别粒子.jpg}
+    \caption{检测并识别粒子}
+\end{figure} 
+3. 对所有帧中的粒子进行追踪，得到每个粒子的轨迹信息。\\
+粒子位置的提取（如图~\ref{fig:guijitu}）x,y（本实验中y为竖直方向坐标，本实验只考虑一维x方向坐标所）位置坐标，mass表示粒子亮度。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{粒子信息.jpg}
+    \caption{粒子信息示例}
+\end{figure} 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{粒子轨迹图.jpg}
+    \caption{粒子运动轨迹识别}
+    \label{fig:guijitu}
+\end{figure} 
+4. 计算每个粒子的MSD：使用tp.imsd函数来计算单粒子的均方位移（MSD）
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{计算MSD.jpg}
+    \caption{计算MSD}
+\end{figure} 
+5. 在本实验的探究过程中，粒子进行布朗运动时，其均方位移（MSD）满足关系式：
+$\langle r(t)^2 \rangle = 2Dt,$其中 $D$ 为扩散系数。由此可知，MSD--时间曲线应当呈现线性关系，拟合所得直线斜率为
+$A = 2D.$在实际数据处理中，我们使用 \texttt{tp.emsd} 函数来计算群体平均 MSD 曲线。
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{计算并拟合.jpg}
+    \caption{计算并拟合}
+\end{figure} 
+6. 获得实验值与理论值的对比数据图，以及某个粒子的位移变化图:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{实际示例.jpg}
+    \caption{实验与理论对比}
+\end{figure} 
+函数实现参考了 GitHub 项目 \emph{trackpy: Python particle tracking toolkit}\footnote{\url{https://github.com/soft-matter/trackpy}}。
 \section{MSD与时间t的线性关系验证}
 首先根据前面处理得到的MSD数据绘制MSD与时间t的关系图，并对数据进行线性拟合(只取0-1s的数据进行拟合，具体的原因详见附录：有效拟合区间的选取与图~\ref{fig:let1}。对于本实验可以得到只有在0-1s内才是误差可接受的范围。后续没有特殊说明时，拟合MSD均取0-1s)，
 验证MSD与时间t的线性关系。 \par
 \subsection{不同直径粒子的均方位移（MSD）}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{实验数据拟合1.jpg}
+  \includegraphics[width=0.7\textwidth]{实验数据拟合1.jpg}
   \caption{不同粒径的实验MSD与拟合曲线以及局部放大图，以及扩散系数}
   \label{fig:fit1}
 \end{figure}
@@ -481,7 +548,7 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 下面是实验计算得到的MSD与理论值的对比：
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{对比1.jpg}
+  \includegraphics[width=0.7\textwidth]{对比1.jpg}
   \caption{不同粒径粒子的MSD对比}
   \label{fig:fitall1}
 \end{figure}
