@@ -118,9 +118,9 @@ m \frac{dv}{dt} = -\gamma v + \xi(t),
 \end{equation}
 上述相关函数体现了热噪声的高斯白噪声特性 \cite{kubo1966}. 该理论不仅解释了布朗运动中的速度涨落与热平衡的关系，而且奠定了现代随机过程与噪声理论在统计物理和热学研究中的基础。
 
-\subsection{小结}
-综上所述，布朗运动、扩散系数以及热噪声理论三者之间存在紧密联系。通过实验对布朗运动的观测与扩散系数的测定，可以深入理解微观粒子的动力学行为，并验证统计物理与热力学理论。
+
 \section{实验目的}
+布朗运动、扩散系数以及热噪声理论三者之间存在紧密联系。通过实验对布朗运动的观测与扩散系数的测定，可以深入理解微观粒子的动力学行为，并验证统计物理与热力学理论。\par
 本实验旨在构建一个由可控电噪声驱动的胶体布朗粒子系统，实现从平衡态到非平衡态的连续过渡，为深入研究非平衡统计物理中的基本问题提供理想实验平台。
 通过系统探究扩散行为的重构机制、有效温度的涌现规律以及熵产生率的定量估计，本研究致力于揭示非平衡驱动力对微观动力学行为的调控作用，
 进而深化对远离平衡态系统中能量耗散、热化过程及非平衡稳态形成机制的理解。
@@ -212,6 +212,7 @@ D = \frac{k_B T_w}{\gamma} + \frac{\sigma^2}{2\gamma^2}.
 若进一步引入迁移率 $\mu = 1/\gamma$，则可写为
 \begin{equation}
 D = \mu k_B T_w + \frac{\sigma^2 \mu^2}{2}.
+\label{eq:erciguanxi}
 \end{equation}\par
 量纲分析表明，该公式在物理上自洽。非热噪声项 $\sigma^2/(2\gamma^2)$ 的单位确实与扩散系数相符，即 $\mathrm{m^2/s}$。  
 在此基础上，概率流与熵产生率的公式可保持原有定义：
@@ -225,32 +226,55 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
 本节结果不仅为非平衡布朗动力学提供了更全面的刻画，还为实验上通过外场调控噪声强度进而控制扩散与熵产生提供了理论依据。
 
 \chapter{理论模拟}
+在进行实验之前，我们首先需要验证理论推导的正确性。考虑到本实验预期的最终结果我们的理论模拟部分包括：
 
-\section{布朗运动及 MSD 与时间 $t$ 的线性关系验证}
+\begin{enumerate}
+  \item 均方位移（MSD）与时间 $t$ 的线性关系验证：聚苯乙烯（PS）微球在溶液中应当做布朗运动。对于布朗运动粒子，其均方位移（MSD）应当与时间 $t$ 呈线性关系，因此可将该关系作为判断 PS 微球是否进行布朗运动的依据。
 
-对于一个半径 $0.5~\mu\text{m}$ 的粒子，在 $20^\circ$C 水溶液中做布朗运动时，其轨迹如图所示：
-\begin{figure}[htbp]
+  \item 朗之万方程数值模拟与等效温度：当外加噪声电压时，需要模拟在电噪声驱动下 PS 微球的运动是否仍然保持与布朗运动相似的性质。为此，我们基于朗之万方程进行了数值模拟，并计算了等效温度。
+
+  \item 不同 $\sigma$ 下的扩散系数拟合：最后，我们对前文的关系式~\eqref{eq:erciguanxi} 进行了数值验证，证明模拟结果与理论计算的预期一致。
+\end{enumerate}
+\newpage
+\section{ MSD 与时间 $t$ 的线性关系验证}
+
+对于一个直径 $0.5~\mu\text{m}$ 的粒子，在 $20^\circ$C 水溶液中做布朗运动时，其轨迹如图所示：
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{trajectory.png}
-  \caption{半径 $0.5~\mu$m 粒子的布朗运动轨迹示意}
+  \includegraphics[width=0.7\textwidth]{trajectory.png}
+  \caption{直径 $0.5~\mu$m 粒子的布朗运动轨迹示意}
   \label{fig:trajectory}
 \end{figure}
 
-对于多个半径 $0.5~\mu\text{m}$ 的粒子，在 $20^\circ$C 水溶液中做布朗运动时，其总 MSD 与时间满足：
+对于多个 $0.5~\mu\text{m}$ 的粒子，在 $20^\circ$C 水溶液中做布朗运动时，其总 MSD 与时间满足\cite{einstein1905}：
 \begin{align}
   \text{MSD}(t) &= 2Dt \quad &\text{(一维)} \\
   \text{MSD}(t) &= 4Dt \quad &\text{(二维)}
 \end{align}
 
-我们主要探究粒子在一维方向的运动特性。以其中 3 个粒子为例，其一维方向的位移随时间变化如图所示：
-
-\begin{figure}[htbp]
+将模拟粒子运动的二维MSD与上述理论绘制成图进行对比可以得到：
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{displacement.png}
+  \includegraphics[width=0.8\textwidth]{二维MSD.png}
+  \caption{直径$0.5~\mu\text{m}$二维MSD理论与模拟}
+\end{figure}
+我们主要探究粒子在一维方向的运动特性。以其中 3 个粒子为例，其一维方向的位移随时间变化如图所示：
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{displacement.png}
   \caption{三颗粒子在一维方向的位移随时间变化}
   \label{fig:displacement}
 \end{figure}
+对模拟一维的MSD和理论上的MSD进行对比得到图~\ref{fig:yiwei}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{一维MSD.png}
+  \caption{直径 $0.5~\mu$m 一维MSD理论与模拟}
+  \label{fig:yiwei}
+\end{figure}
+可以看到我们的理论在模拟上是正确的，可以作为判定PS微球是否进行布朗运动的依据
 
+\section{朗之万方程数值模拟与等效温度}
 \subsection{噪声对布朗运动的影响}
 
 若在溶液环境中引入白噪声电场力，其作用可通过附加一项随机力 $\xi(t)$ 表示。对于直径 $0.5~\mu\text{m}$ 的粒子，随机电场力振幅 $\sigma$ 的定义为
@@ -260,14 +284,12 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
 其中，$q$ 为粒子所带电荷量，$V_0$ 为电极两端所加电压，$d$ 为电极间距。实验中，$\sigma$ 的数量级约为 $10^{-14}$，$d = 0.02~\text{m}$，$q \approx 10^{-16}$，因此 $V_0$ 设置在 $1$--$10~\text{V}$ 范围内。
 
 在该条件下，粒子的有效温度会升高，但其 $x$ 方向位移依旧表现出一维随机布朗运动的性质。
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{一维位移.png}
   \caption{一维情况下的粒子}
   \label{fig:一维位移}
 \end{figure}
-
-\section{朗之万方程数值模拟与等效温度}
 
 布朗运动在一维情况下可由朗之万方程描述：
 \begin{equation}
@@ -281,38 +303,38 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
 
 \section{不同 $\sigma$ 下的扩散系数拟合}
 
-当引入噪声时，扩散系数随 $\sigma$ 的变化关系可表示为
+根据前面推导的方程\eqref{eq:erciguanxi}，当引入噪声时，扩散系数随 $\sigma$ 的变化关系可表示为
 \begin{equation}
   D = D_0 + k\sigma^2,
   \label{eq:D_sigma}
 \end{equation}
 其中 $D_0$ 为无外加噪声时的扩散系数，$k$ 为拟合系数。因此，$D$ 与 $\sigma$ 呈二次曲线关系。
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{fit.png}
+  \includegraphics[width=0.8\textwidth]{fit.png}
   \caption{不同噪声强度下扩散系数 $D$ 的拟合结果}
   \label{fig:fit}
 \end{figure}
 
 
 \chapter{装置设计}
-\section{实验仪器与设计}
-由于水平放置的样品容易受到重力作用，悬浮粒子会逐渐沉降至样品底部，进而受到附加阻力的影响，导致微球的布朗运动减弱，
+\section{实验仪器设计与创新点}
+（1）由于水平放置的样品容易受到重力作用，悬浮粒子会逐渐沉降至样品底部，进而受到附加阻力的影响，导致微球的布朗运动减弱，
 不利于作为理想的实验对象\cite{einstein1905,dhont1996brownian}。\par
-因此，本实验采用垂直放置样品的设计，以最大程度减小重力对粒子运动的干扰。垂直放置不仅能够更好地匹配显微镜的光学路径，
+本实验采用垂直放置样品的设计，以最大程度减小重力对粒子运动的干扰。垂直放置不仅能够更好地匹配显微镜的光学路径，
 从而提升成像质量与分辨率，还能更准确地捕捉布朗粒子的运动轨迹。此外，该设计也便于电极的插入与固定，为后续加载噪声信号提供了实验条件。\par
 
-在光源选择方面，本实验采用非相干光源作为照明。相比于相干光，非相干光源具有较宽的光谱范围和较低的相干性，可有效抑制干涉和衍射效应，
+（2）在光源选择方面，本实验采用非相干光源作为照明。相比于相干光，非相干光源具有较宽的光谱范围和较低的相干性，可有效抑制干涉和衍射效应，
 从而提升成像的均匀性与清晰度，更适合布朗粒子的观测需求\cite{goodman,mandel1995optical}。\par
 
-对于噪声的引入，本实验利用信号发生器产生可控的电噪声信号。
+（3）对于噪声的引入，本实验利用信号发生器产生可控的电噪声信号。
 通过调节其输出频率与幅度，可精确控制噪声特性，以适应不同实验条件\cite{horowitz1989art,schreiber1999electrical}。
 
-实验所用主要仪器如下：
+实验所用仪器相关的具体信息如下：
 分辨率板为 USAF 1951；100$\times$ 物镜（SOPTOP，NA = 0.80，工作距离 2~mm，有限远校正）；
 CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，20~fps；信号发生器型号为固纬 AFG-2225。
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     % 每行 4 张
     \begin{subfigure}{0.22\textwidth}
@@ -389,7 +411,7 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
     \caption{实验仪器}
 \end{figure}
 
-\section{实验装置}
+\section{实验装置与示意图}
 
 \begin{figure}[H]
     \centering
@@ -397,18 +419,18 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
     \caption{实验装置示意图}
     \label{fig:allsetup}
 \end{figure}
-\chapter{实验内容}
-
-\section{实验操作}
-\subsection{实验步骤}
-1.按照图~\ref{fig:allsetup}搭建光路，其示意图如图~\ref{fig:sets}所示，开启 LED 光源，保证LED光经过聚光镜后均匀照射在比色皿（或分辨率板）上，
-固定好LED，显微物镜，和CCD相机后，进行标定实验。
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{实验示意图.png}
     \caption{实验装置示意图}
     \label{fig:sets}
 \end{figure} 
+\chapter{实验内容}
+
+\section{实验操作}
+\subsection{实验步骤}
+1.按照图~\ref{fig:allsetup}搭建光路，其示意图如图~\ref{fig:sets}所示，开启 LED 光源，保证LED光经过聚光镜后均匀照射在比色皿（或分辨率板）上，
+固定好LED，显微物镜，和CCD相机后，进行标定实验。
 标定实验：首先将分辨率板放在夹具上，打开LED，将CCD放在物镜后适当位置，前后调整物镜以使分辨率板的图像变得清晰可见，如下图~\ref{fig:biaoding}
 \begin{figure}[H]
     \centering
@@ -442,9 +464,9 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 首先根据前面处理得到的MSD数据绘制MSD与时间t的关系图，并对数据进行线性拟合(只取0-1s的数据进行拟合，具体的原因详见附录：有效拟合区间的选取与图~\ref{fig:let1}。对于本实验可以得到只有在0-1s内才是误差可接受的范围。后续没有特殊说明时，拟合MSD均取0-1s)，
 验证MSD与时间t的线性关系。 \par
 \subsection{不同直径粒子的均方位移（MSD）}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{实验数据拟合1.jpg}
+  \includegraphics[width=0.8\textwidth]{实验数据拟合1.jpg}
   \caption{不同粒径的实验MSD与拟合曲线以及局部放大图，以及扩散系数}
   \label{fig:fit1}
 \end{figure}
@@ -457,15 +479,15 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
     D_{0.5} > D_{2.0} > D_{5.0}.
 \]
 下面是实验计算得到的MSD与理论值的对比：
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{对比1.jpg}
+  \includegraphics[width=0.8\textwidth]{对比1.jpg}
   \caption{不同粒径粒子的MSD对比}
   \label{fig:fitall1}
 \end{figure}
 \newpage
 \subsection{不同粒子直径，不同粘度溶液中的均方位移（MSD）}
-我们分别配制了不同比例（）的甘油与去离子水混合溶液，测量了不同粘度下2~$\mu$m和0.5~$\mu$m的MSD，并对数据进行拟合：\par
+我们分别配制了不同比例（1：4、1：9和1：99）的甘油与去离子水混合溶液，测量了不同粘度下2~$\mu$m和0.5~$\mu$m的MSD，并对数据进行拟合：\par
 \begin{figure}[H]
     \centering
     % 每行 2 张
@@ -519,7 +541,7 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 在实验中，我们分别设置噪声强度为0--10v，电压间隔为2v，测量了不同噪声强度下0.5~$\mu$m粒子的MSD，如图所示：\par
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{不同噪声强度下的MSD.jpg}
+    \includegraphics[width=0.8\textwidth]{不同噪声强度下的MSD.jpg}
     \caption{不同噪声强度下的MSD}
     \label{fig:msdnoise}
 \end{figure}
@@ -527,7 +549,7 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 的线性拟合，得到斜率之间的关系如图所示。
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{不同噪声强度下的扩散系数.jpg}
+    \includegraphics[width=0.8\textwidth]{不同噪声强度下的扩散系数.jpg}
     \caption{不同噪声强度下的扩散系数}
     \label{fig:diffusionnoise}
 \end{figure}
@@ -598,7 +620,7 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 代入数据，其中 $q = 1.6\times 10^{-17}$（100 个电荷），$\alpha = 13\%$，$d_0 = 1.2\,\mathrm{cm}$。  
 二次函数的拟合参数为 $8.648\times 10^{-16}$，与实际值 $8.516\times 10^{-16}$ 对比，  
 最终误差为 $1.6\%$。
-\newpage
+
 \section{注意事项}
 （1）每次使用完微量移液器，比色皿和电极片需要用无水乙醇清洗干净，防止污染。\par
 （2）实验过程中，不要随意走动或在试验台上进行其他操作，尽量避免振动和气流对比色皿的影响。\par
@@ -647,7 +669,7 @@ CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，
 其次，在实验层面，可通过引入更高分辨率的测量手段（如高速相机、三维轨迹跟踪技术），精确刻画粒子的瞬时速度分布与轨迹涨落，以验证理论模型在更细尺度下的适用性。
 
 \subsection{离轴全息}
-我们计划在实验层面引入更高分辨率的测量手段————离轴全息。目前我们已经实现了如图~\ref{fig:lizhouholo}的离轴全息光路搭建。\par
+我们计划在实验层面引入更高分辨率的测量手段——离轴全息。目前我们已经实现了如图~\ref{fig:lizhouholo}的离轴全息光路搭建。\par
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{expreiment.jpg}
@@ -729,7 +751,7 @@ U(x,y;z) = \mathcal{F}^{-1} \left\{ \mathcal{F}[O'(x,y)] \cdot e^{i 2\pi z \sqrt
     \includegraphics[width=0.9\textwidth]{离轴3分辨率板.jpg}
     \caption{重建3}
 \end{figure}
-可以看到已经能够根据全息图进行重建，但是目前的光路无法达到重建我们实验中想要观察的0.5~5$\mu $m的透明微球，因此我们后续的工作方向就是
+可以看到已经能够根据全息图进行重建，但是目前的光路无法达到重建我们实验中想要观察的0.5-5$\mu $m的透明微球，因此我们后续的工作方向就是
 搭建可以实现显微作用的离轴全息光路并设计优化目前确定z的方法。
 \chapter{附录}
 \section{有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}
