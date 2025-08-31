@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  31 AUG 2025 15:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  31 AUG 2025 17:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -711,11 +711,11 @@ Chapter 3.
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 239.
+(hyperref)                removing `math shift' on input line 245.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 239.
+(hyperref)                removing `math shift' on input line 245.
 
 File: trajectory.png Graphic file (type bmp)
 <trajectory.png>
@@ -732,15 +732,15 @@ File: 一维位移.png Graphic file (type bmp)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 304.
+(hyperref)                removing `math shift' on input line 310.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 304.
+(hyperref)                removing `\sigma' on input line 310.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 304.
+(hyperref)                removing `math shift' on input line 310.
 
 File: fit.png Graphic file (type bmp)
 <fit.png>
@@ -803,7 +803,7 @@ File: 去背景.jpg Graphic file (type bmp)
 File: 转灰度.jpg Graphic file (type bmp)
 <转灰度.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 471--485
+Underfull \hbox (badness 10000) in paragraph at lines 475--489
 
  []
 
@@ -881,7 +881,7 @@ Chapter 6.
 ]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 710--711
+Underfull \hbox (badness 10000) in paragraph at lines 714--715
 
  []
 
@@ -891,15 +891,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 710--711
 Chapter 8.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 739.
+(hyperref)                removing `math shift' on input line 743.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 739.
+(hyperref)                removing `\Delta' on input line 743.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 739.
+(hyperref)                removing `math shift' on input line 743.
 
 [32
 
@@ -907,13 +907,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 File: 取1.jpg Graphic file (type bmp)
 <取1.jpg>
  [33]
-Overfull \hbox (21.07874pt too wide) in paragraph at lines 841--842
+Overfull \hbox (21.07874pt too wide) in paragraph at lines 847--848
 [][] 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 845.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 851.
 [34] [35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 958--959
+Underfull \hbox (badness 10000) in paragraph at lines 964--965
 
  []
 
@@ -932,19 +932,19 @@ File: 2um.png Graphic file (type bmp)
 <2um.png>
 File: 5um.png Graphic file (type bmp)
 <5um.png>
- (./tex.bbl [39] [40] [41
+ [39] (./tex.bbl [40]) [41
 
-]) [42] (./tex.aux)
+] (./tex.aux)
 Package rerunfilecheck Info: File `tex.out' has not changed.
-(rerunfilecheck)             Checksum: 37286BD305EE972DE61C2230B29EF2FE;3372.
+(rerunfilecheck)             Checksum: E79A80DFC039D95BB9377799AAB1CEAE;3692.
  ) 
 Here is how much of TeX's memory you used:
- 20344 strings out of 478630
- 424936 string characters out of 5847730
- 2228012 words of memory out of 5000000
- 40074 multiletter control sequences out of 15000+600000
+ 20399 strings out of 478630
+ 428722 string characters out of 5847730
+ 2198012 words of memory out of 5000000
+ 40129 multiletter control sequences out of 15000+600000
  535087 words of font info for 158 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 89i,13n,97p,413b,1963s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,13n,97p,413b,1959s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tex.pdf (43 pages).
+Output written on tex.pdf (42 pages).

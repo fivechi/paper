@@ -25,11 +25,6 @@ Paul Horowitz and Winfield Hill.
 \newblock {\em The Art of Electronics}.
 \newblock Cambridge University Press, 1989.
 
-\bibitem{kubo1966}
-Ryogo Kubo.
-\newblock The fluctuation-dissipation theorem.
-\newblock {\em Reports on Progress in Physics}, 29(1):255--284, 1966.
-
 \bibitem{Leighton2024}
 Matthew~P. Leighton and David~A. Sivak.
 \newblock Jensen bound for the entropy production rate in stochastic thermodynamics.
@@ -59,10 +54,5 @@ Hong Qian, Michael~P. Sheetz, and Elliot~L. Elson.
 Urs Schreiber and Hans-Gert Kahle.
 \newblock Electrical noise in signal generation and measurement.
 \newblock {\em Measurement Science and Technology}, 10(5):430--439, 1999.
-
-\bibitem{uhlenbeck1930}
-G.~E. Uhlenbeck and L.~S. Ornstein.
-\newblock On the theory of the brownian motion.
-\newblock {\em Physical Review}, 36(5):823--841, 1930.
 
 \end{thebibliography}

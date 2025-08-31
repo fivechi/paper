@@ -1,9 +1,9 @@
 \contentsline {chapter}{\numberline {1}实验背景与目的}{5}{chapter.1}%
-\contentsline {section}{\numberline {1.1}实验背景}{5}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}布朗运动}{5}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}扩散系数}{5}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}热学中的噪声理论}{5}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}实验目的}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.1}实验背景：不同噪声调控下布朗粒子的热扩散特性研究}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}布朗运动与热扩散：从观测到操控}{5}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}调控热扩散的传统途径及其瓶颈}{5}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}实验目的：构建光学观测与电噪声操控一体的实验系统}{6}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}噪声调控：一种突破瓶颈的新范式}{6}{subsection.1.2.1}%
 \contentsline {chapter}{\numberline {2}实验原理}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}有效动能温度公式推导}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}噪声强度与扩散系数的修正关系}{8}{section.2.2}%
