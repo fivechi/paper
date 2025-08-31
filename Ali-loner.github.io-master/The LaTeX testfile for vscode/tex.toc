@@ -29,14 +29,12 @@
 \contentsline {chapter}{\numberline {7}结论与展望}{30}{chapter.7}%
 \contentsline {section}{\numberline {7.1}实验结论}{30}{section.7.1}%
 \contentsline {section}{\numberline {7.2}未来展望}{31}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}离轴全息}{31}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}离轴全息的原理与重建}{31}{subsection.7.2.2}%
-\contentsline {subsubsection}{原理}{32}{section*.33}%
-\contentsline {subsubsection}{重建}{32}{section*.35}%
-\contentsline {subsection}{\numberline {7.2.3}目前的成果}{33}{subsection.7.2.3}%
-\contentsline {chapter}{\numberline {8}附录}{35}{chapter.8}%
-\contentsline {section}{\numberline {8.1}有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}{35}{section.8.1}%
-\contentsline {section}{\numberline {8.2}人员分工}{37}{section.8.2}%
-\contentsline {section}{\numberline {8.3}部分代码展示}{37}{section.8.3}%
-\contentsline {section}{\numberline {8.4}实验数据}{42}{section.8.4}%
-\contentsline {chapter}{参考文献}{42}{figure.caption.52}%
+\contentsline {chapter}{\numberline {8}附录}{32}{chapter.8}%
+\contentsline {section}{\numberline {8.1}有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}{32}{section.8.1}%
+\contentsline {section}{\numberline {8.2}实验仪器规格}{34}{section.8.2}%
+\contentsline {section}{\numberline {8.3}人员分工}{34}{section.8.3}%
+\contentsline {section}{\numberline {8.4}实验内容补充}{34}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}部分使用代码}{34}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}实验数据}{39}{subsection.8.4.2}%
+\contentsline {section}{\numberline {8.5}仪器使用说明书}{40}{section.8.5}%
+\contentsline {chapter}{参考文献}{40}{section.8.5}%
