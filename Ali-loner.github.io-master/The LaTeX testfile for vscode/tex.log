@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  31 AUG 2025 17:10
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  1 SEP 2025 23:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -794,29 +794,42 @@ File: 标定.jpg Graphic file (type bmp)
 [18
 
 ]
-File: 说明.jpg Graphic file (type bmp)
-<说明.jpg>
-File: 图片.jpg Graphic file (type bmp)
-<图片.jpg>
-File: 去背景.jpg Graphic file (type bmp)
-<去背景.jpg>
-File: 转灰度.jpg Graphic file (type bmp)
-<转灰度.jpg>
+File: image1.png Graphic file (type bmp)
+<image1.png>
+File: image2.png Graphic file (type bmp)
+<image2.png>
+File: image3.png Graphic file (type bmp)
+<image3.png>
+File: image4.png Graphic file (type bmp)
+<image4.png>
+File: image5.png Graphic file (type bmp)
+<image5.png>
+File: image6.png Graphic file (type bmp)
+<image6.png>
+ [19]
+File: 说明.png Graphic file (type bmp)
+<说明.png>
+File: 图片.png Graphic file (type bmp)
+<图片.png>
+File: 去背景.png Graphic file (type bmp)
+<去背景.png>
+File: 转灰度.png Graphic file (type bmp)
+<转灰度.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--489
+Underfull \hbox (badness 10000) in paragraph at lines 503--517
 
  []
 
-[19]
-File: 识别粒子.jpg Graphic file (type bmp)
-<识别粒子.jpg>
-File: 粒子信息.jpg Graphic file (type bmp)
-<粒子信息.jpg>
-File: 粒子轨迹图.jpg Graphic file (type bmp)
-<粒子轨迹图.jpg>
- [20]
-File: 计算MSD.jpg Graphic file (type bmp)
-<计算MSD.jpg>
+[20]
+File: 识别粒子.png Graphic file (type bmp)
+<识别粒子.png>
+File: 粒子信息.png Graphic file (type bmp)
+<粒子信息.png>
+File: 粒子轨迹图.png Graphic file (type bmp)
+<粒子轨迹图.png>
+ [21]
+File: 计算MSD.png Graphic file (type bmp)
+<计算MSD.png>
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -840,84 +853,93 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-File: 计算并拟合.jpg Graphic file (type bmp)
-<计算并拟合.jpg>
- [21]
-File: 实际示例.jpg Graphic file (type bmp)
-<实际示例.jpg>
-File: 实验数据拟合1.jpg Graphic file (type bmp)
-<实验数据拟合1.jpg>
+File: 计算并拟合.png Graphic file (type bmp)
+<计算并拟合.png>
  [22]
-File: 对比1.jpg Graphic file (type bmp)
-<对比1.jpg>
+File: 实际示例.png Graphic file (type bmp)
+<实际示例.png>
+File: 实验数据拟合1.png Graphic file (type bmp)
+<实验数据拟合1.png>
  [23]
-File: 实验数据拟合2.jpg Graphic file (type bmp)
-<实验数据拟合2.jpg>
-File: 实验数据拟合3.jpg Graphic file (type bmp)
-<实验数据拟合3.jpg>
-File: 对比2.jpg Graphic file (type bmp)
-<对比2.jpg>
-File: 对比3.jpg Graphic file (type bmp)
-<对比3.jpg>
+File: image7.png Graphic file (type bmp)
+<image7.png>
+File: image8.png Graphic file (type bmp)
+<image8.png>
+File: 实验数据拟合2.png Graphic file (type bmp)
+<实验数据拟合2.png>
+ [24]
+File: 10v0.5Hz.png Graphic file (type bmp)
+<10v0.5Hz.png>
+File: 10v0.5Hz1.png Graphic file (type bmp)
+<10v0.5Hz1.png>
+File: 10v0.1Hz.png Graphic file (type bmp)
+<10v0.1Hz.png>
+File: 10v0.1Hz1.png Graphic file (type bmp)
+<10v0.1Hz1.png>
+File: sin10v0.5Hz1.png Graphic file (type bmp)
+<sin10v0.5Hz1.png>
+File: sin10v0.5Hz.png Graphic file (type bmp)
+<sin10v0.5Hz.png>
+ [25]
 File: 粒子1.jpg Graphic file (type bmp)
 <粒子1.jpg>
 File: 粒子2.jpg Graphic file (type bmp)
 <粒子2.jpg>
- [24]
+ [26]
 File: 不同噪声强度下的MSD.jpg Graphic file (type bmp)
 <不同噪声强度下的MSD.jpg>
 File: 不同噪声强度下的扩散系数.jpg Graphic file (type bmp)
 <不同噪声强度下的扩散系数.jpg>
- [25]
+ [27]
 File: 温度.jpg Graphic file (type bmp)
 <温度.jpg>
- [26]
+ [28]
 File: 二次拟合.jpg Graphic file (type bmp)
 <二次拟合.jpg>
- [27] [28]
+ [29] [30]
 Chapter 6.
-[29
+[31
 
 ]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 714--715
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
 
  []
 
-[30
+[32
 
-] [31]
+] [33]
 Chapter 8.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 743.
+(hyperref)                removing `math shift' on input line 783.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 743.
+(hyperref)                removing `\Delta' on input line 783.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 743.
+(hyperref)                removing `math shift' on input line 783.
 
-[32
+[34
 
 ]
 File: 取1.jpg Graphic file (type bmp)
 <取1.jpg>
- [33]
-Overfull \hbox (21.07874pt too wide) in paragraph at lines 847--848
+ [35]
+Overfull \hbox (21.07874pt too wide) in paragraph at lines 887--888
 [][] 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 851.
-[34] [35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 964--965
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 891.
+[36] [37] [38]
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1005
 
  []
 
-[37] [38]
+[39] [40]
 File: 不同比例.png Graphic file (type bmp)
 <不同比例.png>
 File: 不同电压.png Graphic file (type bmp)
@@ -932,19 +954,19 @@ File: 2um.png Graphic file (type bmp)
 <2um.png>
 File: 5um.png Graphic file (type bmp)
 <5um.png>
- [39] (./tex.bbl [40]) [41
+ [41] (./tex.bbl [42]) [43
 
 ] (./tex.aux)
 Package rerunfilecheck Info: File `tex.out' has not changed.
-(rerunfilecheck)             Checksum: E79A80DFC039D95BB9377799AAB1CEAE;3692.
+(rerunfilecheck)             Checksum: 8CD93FDEB7C2D322003BA8DE67511194;3668.
  ) 
 Here is how much of TeX's memory you used:
- 20399 strings out of 478630
- 428722 string characters out of 5847730
+ 20459 strings out of 478630
+ 429205 string characters out of 5847730
  2198012 words of memory out of 5000000
- 40129 multiletter control sequences out of 15000+600000
+ 40179 multiletter control sequences out of 15000+600000
  535087 words of font info for 158 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  89i,13n,97p,413b,1959s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tex.pdf (42 pages).
+Output written on tex.pdf (44 pages).

@@ -459,17 +459,45 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
 4.开启 LED，观察 PS 微球，待稳定时收集数据（对于验证等效温度与扩散系数的拟合实验，在稳定后需要控制信号发生器
 依次加载0--10V的电压，然后收集数据）。\par
 5.将比色皿取下，拍摄背景图片。\par
-6.进行数据处理，计算相关物理量。\par
+6.进行数据处理，计算相关物理量。\\
+下面是我们拍摄到的几个直径为0.5~$\mu$m的PS小球在去离子水中运动轨迹图和它在x方向上的位移随时间变化曲线：
+\begin{figure}[H]
+    \centering
+    % 每行 2 张
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{image1.png}
+    \end{subfigure}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=\linewidth]{image2.png}
+    \end{subfigure}
+
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{image3.png}
+    \end{subfigure}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=\linewidth]{image4.png}
+    \end{subfigure}
+
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{image5.png}
+    \end{subfigure}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=\linewidth]{image6.png}
+    \end{subfigure}
+
+    \caption{0.5~$\mu$m微球轨迹图与位移-时间图像}
+\end{figure}
+\newpage
 \subsection{数据处理}
 1. 首先，使用附录~\ref{code:searchforparticles}的python代码对采集到的视频进行处理，提取出每一帧图像，并使用trackpy库对每一帧图像进行粒子检测，得到每一帧中所有粒子的坐标信息：\\
 使用python提取视频，获得每一帧图像：\\
 用python的cv2和os模块，来逐帧截取视频：
 \begin{figure}[H]
-    \includegraphics[width=0.6\textwidth]{说明.jpg}
+    \includegraphics[width=0.6\textwidth]{说明.png}
 \end{figure} 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{图片.jpg}
+    \includegraphics[width=0.8\textwidth]{图片.png}
     \caption{截取图片}
 \end{figure} 
 背景图像去除防止干扰，增强对比度，并使用标准的RGB转灰度公式将每一帧图片其转换为灰度图像：\\
@@ -477,11 +505,11 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
     \centering
     % 每行 2 张
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{去背景.jpg}
+        \includegraphics[width=\linewidth]{去背景.png}
         \caption{去背景}
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{转灰度.jpg}
+        \includegraphics[width=\linewidth]{转灰度.png}
         \caption{转灰度}
     \end{subfigure}
 
@@ -494,26 +522,26 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
 使用trackpy中的annotate函数来标注检测到的粒子（可以通过调整minmass参数、maxsize参数和separation参数来限制粒子的强度、例子最大尺寸和粒子间的最小间隔）
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{识别粒子.jpg}
+    \includegraphics[width=0.8\textwidth]{识别粒子.png}
     \caption{检测并识别粒子}
 \end{figure} 
 3. 对所有帧中的粒子进行追踪，得到每个粒子的轨迹信息。\\
 粒子位置的提取（如图~\ref{fig:guijitu}）x,y（本实验中y为竖直方向坐标，本实验只考虑一维x方向坐标所）位置坐标，mass表示粒子亮度。
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{粒子信息.jpg}
+    \includegraphics[width=0.8\textwidth]{粒子信息.png}
     \caption{粒子信息示例}
 \end{figure} 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{粒子轨迹图.jpg}
+    \includegraphics[width=0.8\textwidth]{粒子轨迹图.png}
     \caption{粒子运动轨迹识别}
     \label{fig:guijitu}
 \end{figure} 
 4. 计算每个粒子的MSD：使用tp.imsd函数来计算单粒子的均方位移（MSD）
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{计算MSD.jpg}
+    \includegraphics[width=0.8\textwidth]{计算MSD.png}
     \caption{计算MSD}
 \end{figure} 
 5. 在本实验的探究过程中，粒子进行布朗运动时，其均方位移（MSD）满足关系式：
@@ -521,13 +549,13 @@ $\langle r(t)^2 \rangle = 2Dt,$其中 $D$ 为扩散系数。由此可知，MSD--
 $A = 2D.$在实际数据处理中，我们使用 \texttt{tp.emsd} 函数来计算群体平均 MSD 曲线。
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{计算并拟合.jpg}
+    \includegraphics[width=0.8\textwidth]{计算并拟合.png}
     \caption{计算并拟合}
 \end{figure} 
 6. 获得实验值与理论值的对比数据图，以及某个粒子的位移变化图:
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{实际示例.jpg}
+    \includegraphics[width=0.8\textwidth]{实际示例.png}
     \caption{实验与理论对比}
 \end{figure} 
 函数实现参考了 GitHub 项目 \emph{trackpy: Python particle tracking toolkit}\footnote{\url{https://github.com/soft-matter/trackpy}}。
@@ -537,7 +565,7 @@ $A = 2D.$在实际数据处理中，我们使用 \texttt{tp.emsd} 函数来计�
 \subsection{不同直径粒子的均方位移（MSD）}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{实验数据拟合1.jpg}
+  \includegraphics[width=0.7\textwidth]{实验数据拟合1.png}
   \caption{不同粒径的实验MSD与拟合曲线以及局部放大图，以及扩散系数}
   \label{fig:fit1}
 \end{figure}
@@ -549,52 +577,64 @@ $A = 2D.$在实际数据处理中，我们使用 \texttt{tp.emsd} 函数来计�
 \[
     D_{0.5} > D_{2.0} > D_{5.0}.
 \]
-下面是实验计算得到的MSD与理论值的对比：
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.7\textwidth]{对比1.jpg}
-  \caption{不同粒径粒子的MSD对比}
-  \label{fig:fitall1}
-\end{figure}
-\newpage
-\subsection{不同粒子直径，不同粘度溶液中的均方位移（MSD）}
-我们分别配制了不同比例（1：4、1：9和1：99）的甘油与去离子水混合溶液，测量了不同粘度下2~$\mu$m和0.5~$\mu$m的MSD，并对数据进行拟合：\par
+
+\subsection{不同粘度溶液中的均方位移（MSD）}
+在20\%浓度的甘油中，我们截取其中一个微球的运动轨迹和位移-时间图像如下：\par
 \begin{figure}[H]
     \centering
     % 每行 2 张
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{实验数据拟合2.jpg}
-        \caption{2~$\mu$m的粒子在不同粘度溶液中的MSD}
-        \label{fig:fit2}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{image7.png}
     \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{实验数据拟合3.jpg}
-        \caption{0.5~$\mu$m的粒子在不同粘度溶液中的MSD}
-        \label{fig:fit3}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=\linewidth]{image8.png}
     \end{subfigure}
 
-    \caption{实验数据拟合}
+    \caption{0.5~$\mu$m的粒子在20\%粘度溶液中的运动轨迹和x-t图}
 \end{figure}
-与前面类似，依旧可以得到不同粘度下的扩散系数，并与理论值进行对比：
+我们分别配制了不同比例（甘油分别为10\%,15\%,20\%,30\%）的甘油与去离子水混合溶液，测量了不同粘度下0.5~$\mu$m的MSD，并画出了理论线：\par
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{实验数据拟合2.png}
+    \caption{0.5~$\mu$m的粒子在不同粘度溶液中的MSD}
+    \label{fig:fit2}
+\end{figure}
+
+\section{计算等效温度与扩散系数}
+对于加载不同噪声强度的实验，我们以0.5~$\mu$m的粒子为例，为了验证我们能够将信号发生器的电压加载到电极并且对微球产生影响，我们
+在进行正式实验之前，先加载了正弦波与方波来进行验证：\par
 \begin{figure}[H]
     \centering
     % 每行 2 张
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{对比2.jpg}
-        \caption{2~$\mu$m的粒子的MSD对比}
-        \label{fig:fitall2}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{10v0.5Hz.png}
+        \caption{方波10v0.5Hz轨迹图}
     \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{对比3.jpg}
-        \caption{0.5~$\mu$m粒子的MSD对比}
-        \label{fig:fitall3}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=\linewidth]{10v0.5Hz1.png}
+        \caption{方波10v0.5Hz位移-时间图}
     \end{subfigure}
 
-    \caption{实验数据拟合}
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{10v0.1Hz.png}
+        \caption{方波10v0.1Hz轨迹图}
+    \end{subfigure}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=\linewidth]{10v0.1Hz1.png}
+        \caption{方波10v0.15Hz位移-时间图}
+    \end{subfigure}
+
+    \begin{subfigure}{0.3\textwidth}
+        \includegraphics[width=\linewidth]{sin10v0.5Hz1.png}
+        \caption{正弦波10v0.5Hz轨迹图}
+    \end{subfigure}
+    \begin{subfigure}{0.6\textwidth}
+        \includegraphics[width=\linewidth]{sin10v0.5Hz.png}
+        \caption{正弦波10v0.5Hz位移-时间图}
+    \end{subfigure}
+
+    \caption{0.5~$\mu$m的粒子在加载不同波形和频率的运动轨迹和x-t图}
 \end{figure}
-
-\section{计算等效温度与扩散系数的拟合}
-对于加载不同噪声强度的实验，我们以0.5~$\mu$m的粒子为例，
 0.5微米ps球在不同电压下经过30秒布朗运动的x方向位移测算，得到x方向MSD数据如图所示，可见整体上随着电压增大，小球的总体MSD呈现增大趋势。分别以0v和10v为例，它们的粒子x方向位移随时间t的关系为：\par
 \begin{figure}[H]
     \centering
