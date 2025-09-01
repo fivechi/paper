@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  1 SEP 2025 23:48
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  2 SEP 2025 00:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -781,8 +781,8 @@ File: 信号发生器.jpg Graphic file (type bmp)
 [15
 
 ]
-File: 完整实验装置.jpg Graphic file (type bmp)
-<完整实验装置.jpg>
+File: 实验装置模块.png Graphic file (type bmp)
+<实验装置模块.png>
 File: 实验示意图.png Graphic file (type bmp)
 <实验示意图.png>
  [16] [17]
@@ -902,26 +902,21 @@ Chapter 6.
 
 ]
 Chapter 7.
-
-Underfull \hbox (badness 10000) in paragraph at lines 754--755
-
- []
-
 [32
 
 ] [33]
 Chapter 8.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 783.
+(hyperref)                removing `math shift' on input line 789.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 783.
+(hyperref)                removing `\Delta' on input line 789.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 783.
+(hyperref)                removing `math shift' on input line 789.
 
 [34
 
@@ -929,13 +924,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 File: 取1.jpg Graphic file (type bmp)
 <取1.jpg>
  [35]
-Overfull \hbox (21.07874pt too wide) in paragraph at lines 887--888
+Overfull \hbox (21.07874pt too wide) in paragraph at lines 893--894
 [][] 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 891.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 897.
 [36] [37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1004--1005
+Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
 
  []
 
