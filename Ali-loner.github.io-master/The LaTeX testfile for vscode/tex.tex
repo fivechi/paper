@@ -260,18 +260,6 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
   \label{fig:trajectory}
 \end{figure}
 
-对于多个 $0.5~\mu\text{m}$ 的粒子，在 $20^\circ$C 水溶液中做布朗运动时，其总 MSD 与时间满足\cite{einstein1905}：
-\begin{align}
-  \text{MSD}(t) &= 2Dt \quad &\text{(一维)} \\
-  \text{MSD}(t) &= 4Dt \quad &\text{(二维)}
-\end{align}
-
-将模拟粒子运动的二维MSD与上述理论绘制成图进行对比可以得到：
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\textwidth]{二维MSD.png}
-  \caption{直径$0.5~\mu\text{m}$二维MSD理论与模拟}
-\end{figure}
 我们主要探究粒子在一维方向的运动特性。以其中 3 个粒子为例，其一维方向的位移随时间变化如图所示：
 \begin{figure}[H]
   \centering
@@ -279,13 +267,17 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
   \caption{三颗粒子在一维方向的位移随时间变化}
   \label{fig:displacement}
 \end{figure}
-对模拟一维的MSD和理论上的MSD进行对比得到图~\ref{fig:yiwei}
+将模拟粒子运动的二维MSD与上述理论绘制成图进行对比可以得到：
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{一维MSD.png}
-  \caption{直径 $0.5~\mu$m 一维MSD理论与模拟}
-  \label{fig:yiwei}
+  \includegraphics[width=0.8\textwidth]{二维MSD.png}
+  \caption{直径$0.5~\mu\text{m}$二维MSD理论与模拟}
 \end{figure}
+对于多个 $0.5~\mu\text{m}$ 的粒子，在 $20^\circ$C 水溶液中做布朗运动时，其总 MSD 与时间满足\cite{einstein1905}：
+\begin{align}
+  \text{MSD}(t) &= 2Dt \quad &\text{(一维)} \\
+  \text{MSD}(t) &= 4Dt \quad &\text{(二维)}
+\end{align}
 可以看到我们的理论在模拟上是正确的，可以作为判定PS微球是否进行布朗运动的依据
 
 \section{朗之万方程数值模拟与等效温度}
@@ -297,12 +289,18 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
 \end{equation}
 其中，$q$ 为粒子所带电荷量，$V_0$ 为电极两端所加电压，$d$ 为电极间距。实验中，$\sigma$ 的数量级约为 $10^{-14}$，$d = 0.02~\text{m}$，$q \approx 10^{-16}$，因此 $V_0$ 设置在 $1$--$10~\text{V}$ 范围内。
 
-在该条件下，粒子的有效温度会升高，但其 $x$ 方向位移依旧表现出一维随机布朗运动的性质。
+在该条件下，粒子的有效温度会升高，但其 $x$ 方向位移依旧表现出一维随机布朗运动的性质。我们对该情况下的粒子运动也进行了模拟：
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{一维位移.png}
-  \caption{一维情况下的粒子}
+  \caption{加噪声情况下的粒子}
   \label{fig:一维位移}
+\end{figure}
+提取我们关注的一维信息后，得到了x随时间的变化图：
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{x.png}
+  \caption{一维情况下加噪声的粒子}
 \end{figure}
 
 布朗运动在一维情况下可由朗之万方程描述：

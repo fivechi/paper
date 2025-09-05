@@ -9,9 +9,9 @@
 \contentsline {section}{\numberline {2.2}噪声强度与扩散系数的修正关系}{8}{section.2.2}%
 \contentsline {chapter}{\numberline {3}理论模拟}{10}{chapter.3}%
 \contentsline {section}{\numberline {3.1} MSD 与时间 $t$ 的线性关系验证}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}朗之万方程数值模拟与等效温度}{13}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}噪声对布朗运动的影响}{13}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}不同 $\sigma $ 下的扩散系数拟合}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.2}朗之万方程数值模拟与等效温度}{12}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}噪声对布朗运动的影响}{12}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}不同 $\sigma $ 下的扩散系数拟合}{14}{section.3.3}%
 \contentsline {chapter}{\numberline {4}装置设计}{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}实验仪器设计与创新点}{15}{section.4.1}%
 \contentsline {section}{\numberline {4.2}实验装置与示意图}{17}{section.4.2}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  5 SEP 2025 14:32
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  5 SEP 2025 16:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -725,32 +725,32 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 File: trajectory.png Graphic file (type bmp)
 <trajectory.png>
-File: 二维MSD.png Graphic file (type bmp)
-<二维MSD.png>
 File: displacement.png Graphic file (type bmp)
 <displacement.png>
+File: 二维MSD.png Graphic file (type bmp)
+<二维MSD.png>
 [11]
-File: 一维MSD.png Graphic file (type bmp)
-<一维MSD.png>
- [12]
 File: 一维位移.png Graphic file (type bmp)
 <一维位移.png>
+ [12]
+File: x.png Graphic file (type bmp)
+<x.png>
+ [13]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 316.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 318.
+(hyperref)                removing `\sigma' on input line 316.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 318.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 318.
+(hyperref)                removing `math shift' on input line 316.
 
 File: fit.png Graphic file (type bmp)
 <fit.png>
-[13] [14]
+[14]
 Chapter 4.
 File: 5.0ml微量离心管.jpg Graphic file (type bmp)
 <5.0ml微量离心管.jpg>
@@ -822,7 +822,7 @@ File: 去背景.png Graphic file (type bmp)
 File: 转灰度.png Graphic file (type bmp)
 <转灰度.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--538
+Underfull \hbox (badness 10000) in paragraph at lines 522--536
 
  []
 
@@ -903,15 +903,15 @@ Chapter 6.
 Chapter 7.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 802.
+(hyperref)                removing `math shift' on input line 800.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 802.
+(hyperref)                removing `\Delta' on input line 800.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 802.
+(hyperref)                removing `math shift' on input line 800.
 
 [33
 
@@ -919,14 +919,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 File: 取1.jpg Graphic file (type bmp)
 <取1.jpg>
  [34]
-Overfull \hbox (21.07874pt too wide) in paragraph at lines 932--933
+Overfull \hbox (21.07874pt too wide) in paragraph at lines 930--931
 [][] 
  []
 
 [35]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 936.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 934.
  [36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1050
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1048
 
  []
 
@@ -952,10 +952,10 @@ Package rerunfilecheck Info: File `tex.out' has not changed.
 (rerunfilecheck)             Checksum: 4A284691ECEA355E9AC42DDF74869E3D;3702.
  ) 
 Here is how much of TeX's memory you used:
- 20528 strings out of 478630
- 431838 string characters out of 5847730
+ 20527 strings out of 478630
+ 431795 string characters out of 5847730
  2187012 words of memory out of 5000000
- 40247 multiletter control sequences out of 15000+600000
+ 40246 multiletter control sequences out of 15000+600000
  535087 words of font info for 158 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  89i,13n,97p,413b,1852s stack positions out of 10000i,1000n,20000p,200000b,200000s
