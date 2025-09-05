@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  2 SEP 2025 00:05
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.5.21)  5 SEP 2025 14:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -547,41 +547,47 @@ Package caption Info: New subtype `subfigure' on input line 239.
 \c@subfigure=\count335
 Package caption Info: New subtype `subtable' on input line 239.
 \c@subtable=\count336
+) (d:/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip65
+\multirow@cntb=\count337
+\multirow@dima=\skip66
+\bigstrutjot=\dimen286
 ) (d:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip65
-\enit@outerparindent=\dimen286
+\labelindent=\skip67
+\enit@outerparindent=\dimen287
 \enit@toks=\toks30
 \enit@inbox=\box64
-\enit@count@id=\count337
-\enitdp@description=\count338
+\enit@count@id=\count338
+\enitdp@description=\count339
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 24.
+Package hyperref Info: Option `colorlinks' set `true' on input line 26.
  (d:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (./tex.aux)
 \openout1 = `tex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -623,69 +629,69 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 65.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 65.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 65.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 65.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 65.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 65.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 65.
-LaTeX Font Info:    Redeclaring math accent \check on input line 65.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 65.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 65.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 65.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 67.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 67.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 67.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 67.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 67.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 67.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 67.
+LaTeX Font Info:    Redeclaring math accent \check on input line 67.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 67.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 67.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 67.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 65.
+(Font)              `operators' in the math version `normal' on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 65.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 67.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 65.
+(Font)              `operators' in the math version `bold' on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 65.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 65.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 65.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 65.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 65.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 65.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 65.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 65.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 65.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 65.
-\c@lstlisting=\count339
-Package hyperref Info: Link coloring ON on input line 65.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 67.
+\c@lstlisting=\count340
+Package hyperref Info: Link coloring ON on input line 67.
 (./tex.out) (./tex.out)
 \@outlinefile=\write3
 \openout3 = `tex.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
  (d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
  (d:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -711,11 +717,11 @@ Chapter 3.
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 245.
+(hyperref)                removing `math shift' on input line 253.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 245.
+(hyperref)                removing `math shift' on input line 253.
 
 File: trajectory.png Graphic file (type bmp)
 <trajectory.png>
@@ -732,15 +738,15 @@ File: 一维位移.png Graphic file (type bmp)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 310.
+(hyperref)                removing `math shift' on input line 318.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 310.
+(hyperref)                removing `\sigma' on input line 318.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 310.
+(hyperref)                removing `math shift' on input line 318.
 
 File: fit.png Graphic file (type bmp)
 <fit.png>
@@ -785,13 +791,13 @@ File: 实验装置模块.png Graphic file (type bmp)
 <实验装置模块.png>
 File: 实验示意图.png Graphic file (type bmp)
 <实验示意图.png>
- [16] [17]
+ [16] [17] [18]
 Chapter 5.
 File: 标定装置.jpg Graphic file (type bmp)
 <标定装置.jpg>
 File: 标定.jpg Graphic file (type bmp)
 <标定.jpg>
-[18
+[19
 
 ]
 File: image1.png Graphic file (type bmp)
@@ -806,7 +812,7 @@ File: image5.png Graphic file (type bmp)
 <image5.png>
 File: image6.png Graphic file (type bmp)
 <image6.png>
- [19]
+ [20]
 File: 说明.png Graphic file (type bmp)
 <说明.png>
 File: 图片.png Graphic file (type bmp)
@@ -816,18 +822,18 @@ File: 去背景.png Graphic file (type bmp)
 File: 转灰度.png Graphic file (type bmp)
 <转灰度.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--517
+Underfull \hbox (badness 10000) in paragraph at lines 524--538
 
  []
 
-[20]
+[21]
 File: 识别粒子.png Graphic file (type bmp)
 <识别粒子.png>
 File: 粒子信息.png Graphic file (type bmp)
 <粒子信息.png>
 File: 粒子轨迹图.png Graphic file (type bmp)
 <粒子轨迹图.png>
- [21]
+ [22]
 File: 计算MSD.png Graphic file (type bmp)
 <计算MSD.png>
 
@@ -855,19 +861,19 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 
 File: 计算并拟合.png Graphic file (type bmp)
 <计算并拟合.png>
- [22]
+ [23]
 File: 实际示例.png Graphic file (type bmp)
 <实际示例.png>
 File: 实验数据拟合1.png Graphic file (type bmp)
 <实验数据拟合1.png>
- [23]
+ [24]
 File: image7.png Graphic file (type bmp)
 <image7.png>
 File: image8.png Graphic file (type bmp)
 <image8.png>
+ [25]
 File: 实验数据拟合2.png Graphic file (type bmp)
 <实验数据拟合2.png>
- [24]
 File: 10v0.5Hz.png Graphic file (type bmp)
 <10v0.5Hz.png>
 File: 10v0.5Hz1.png Graphic file (type bmp)
@@ -880,61 +886,51 @@ File: sin10v0.5Hz1.png Graphic file (type bmp)
 <sin10v0.5Hz1.png>
 File: sin10v0.5Hz.png Graphic file (type bmp)
 <sin10v0.5Hz.png>
- [25]
-File: 粒子1.jpg Graphic file (type bmp)
-<粒子1.jpg>
-File: 粒子2.jpg Graphic file (type bmp)
-<粒子2.jpg>
  [26]
-File: 不同噪声强度下的MSD.jpg Graphic file (type bmp)
-<不同噪声强度下的MSD.jpg>
-File: 不同噪声强度下的扩散系数.jpg Graphic file (type bmp)
-<不同噪声强度下的扩散系数.jpg>
+File: 不同噪声强度下的MSD.png Graphic file (type bmp)
+<不同噪声强度下的MSD.png>
  [27]
-File: 温度.jpg Graphic file (type bmp)
-<温度.jpg>
+File: 二次拟合.png Graphic file (type bmp)
+<二次拟合.png>
  [28]
-File: 二次拟合.jpg Graphic file (type bmp)
-<二次拟合.jpg>
+File: 有效温度.png Graphic file (type bmp)
+<有效温度.png>
  [29] [30]
 Chapter 6.
 [31
 
-]
+] [32]
 Chapter 7.
-[32
-
-] [33]
-Chapter 8.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 789.
+(hyperref)                removing `math shift' on input line 802.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 789.
+(hyperref)                removing `\Delta' on input line 802.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 789.
+(hyperref)                removing `math shift' on input line 802.
 
-[34
+[33
 
 ]
 File: 取1.jpg Graphic file (type bmp)
 <取1.jpg>
- [35]
-Overfull \hbox (21.07874pt too wide) in paragraph at lines 893--894
+ [34]
+Overfull \hbox (21.07874pt too wide) in paragraph at lines 932--933
 [][] 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 897.
-[36] [37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
+[35]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 936.
+ [36] [37]
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1050
 
  []
 
-[39] [40]
+[38] [39]
 File: 不同比例.png Graphic file (type bmp)
 <不同比例.png>
 File: 不同电压.png Graphic file (type bmp)
@@ -949,19 +945,19 @@ File: 2um.png Graphic file (type bmp)
 <2um.png>
 File: 5um.png Graphic file (type bmp)
 <5um.png>
- [41] (./tex.bbl [42]) [43
+ [40] (./tex.bbl [41]) [42
 
 ] (./tex.aux)
 Package rerunfilecheck Info: File `tex.out' has not changed.
-(rerunfilecheck)             Checksum: 8CD93FDEB7C2D322003BA8DE67511194;3668.
+(rerunfilecheck)             Checksum: 4A284691ECEA355E9AC42DDF74869E3D;3702.
  ) 
 Here is how much of TeX's memory you used:
- 20459 strings out of 478630
- 429205 string characters out of 5847730
- 2198012 words of memory out of 5000000
- 40179 multiletter control sequences out of 15000+600000
+ 20528 strings out of 478630
+ 431838 string characters out of 5847730
+ 2187012 words of memory out of 5000000
+ 40247 multiletter control sequences out of 15000+600000
  535087 words of font info for 158 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 89i,13n,97p,413b,1959s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,13n,97p,413b,1852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on tex.pdf (44 pages).
+Output written on tex.pdf (43 pages).

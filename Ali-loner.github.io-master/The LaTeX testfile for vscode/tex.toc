@@ -15,26 +15,25 @@
 \contentsline {chapter}{\numberline {4}装置设计}{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}实验仪器设计与创新点}{15}{section.4.1}%
 \contentsline {section}{\numberline {4.2}实验装置与示意图}{17}{section.4.2}%
-\contentsline {chapter}{\numberline {5}实验内容}{18}{chapter.5}%
-\contentsline {section}{\numberline {5.1}实验操作}{18}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}实验步骤}{18}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}数据处理}{20}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}MSD与时间t的线性关系验证}{23}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}不同直径粒子的均方位移（MSD）}{24}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}不同粘度溶液中的均方位移（MSD）}{24}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}计算等效温度与扩散系数}{25}{section.5.3}%
-\contentsline {section}{\numberline {5.4}注意事项}{30}{section.5.4}%
-\contentsline {chapter}{\numberline {6}误差分析}{31}{chapter.6}%
-\contentsline {section}{\numberline {6.1}误差来源分析}{31}{section.6.1}%
-\contentsline {chapter}{\numberline {7}结论与展望}{32}{chapter.7}%
-\contentsline {section}{\numberline {7.1}实验结论}{32}{section.7.1}%
-\contentsline {section}{\numberline {7.2}未来展望}{33}{section.7.2}%
-\contentsline {chapter}{\numberline {8}附录}{34}{chapter.8}%
-\contentsline {section}{\numberline {8.1}有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}{34}{section.8.1}%
-\contentsline {section}{\numberline {8.2}实验仪器规格}{36}{section.8.2}%
-\contentsline {section}{\numberline {8.3}人员分工}{36}{section.8.3}%
-\contentsline {section}{\numberline {8.4}实验内容补充}{36}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}部分使用代码}{36}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}实验数据}{41}{subsection.8.4.2}%
-\contentsline {section}{\numberline {8.5}仪器使用说明书}{42}{section.8.5}%
-\contentsline {chapter}{参考文献}{42}{section.8.5}%
+\contentsline {section}{\numberline {4.3}仪器性能指标评定}{17}{section.4.3}%
+\contentsline {section}{\numberline {4.4}局限性与误差来源分析}{17}{section.4.4}%
+\contentsline {section}{\numberline {4.5}改进和优化思路}{18}{section.4.5}%
+\contentsline {chapter}{\numberline {5}实验内容}{19}{chapter.5}%
+\contentsline {section}{\numberline {5.1}实验操作}{19}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}实验步骤}{19}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}数据处理}{21}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}MSD与时间t的线性关系验证}{24}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}不同直径粒子的均方位移（MSD）}{25}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}不同粘度溶液中的均方位移（MSD）}{25}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}计算等效温度与扩散系数}{26}{section.5.3}%
+\contentsline {section}{\numberline {5.4}注意事项}{29}{section.5.4}%
+\contentsline {chapter}{\numberline {6}结论与展望}{31}{chapter.6}%
+\contentsline {section}{\numberline {6.1}实验结论}{31}{section.6.1}%
+\contentsline {section}{\numberline {6.2}未来展望}{32}{section.6.2}%
+\contentsline {chapter}{\numberline {7}附录}{33}{chapter.7}%
+\contentsline {section}{\numberline {7.1}有效拟合区间的选取（MSD 与延迟时间 $\Delta t$ 的关系分析）}{33}{section.7.1}%
+\contentsline {section}{\numberline {7.2}实验仪器规格与人员分工}{35}{section.7.2}%
+\contentsline {section}{\numberline {7.3}实验内容补充}{36}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}部分使用代码}{36}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}实验数据}{41}{subsection.7.3.2}%
+\contentsline {chapter}{参考文献}{41}{figure.caption.46}%

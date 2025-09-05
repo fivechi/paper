@@ -13,6 +13,8 @@
 \usepackage{graphicx} %插入图片的宏包
 \usepackage{float} %设置图片浮动位置的宏包
 \usepackage{subcaption}
+\usepackage{multirow}   % 合并单元格
+\usepackage{caption}    % 控制表格标题
 \usepackage{enumitem}
 % \renewcommand{\bibname}{} % 去掉参考文献标题
 
@@ -69,21 +71,27 @@
 \large
   
 热力学基本规律在宏观体系中已得到广泛验证，但其在微观尺度下的适用性仍需深入探讨。
-该实验从微观粒子的热运动出发，以布朗运动为典型模型，结合实验与理论分析，通过测量布朗粒子的随机位移行为，验证不可逆过程中的熵产生机制。
-进一步地，我们建立了布朗运动中扩散系数与熵产生之间的热力学不确定关系，揭示了微观热运动背后的统计规律及其与热力学第二定律的一致性。
-该实验研究为从微观尺度验证热力学基本规律提供了有效途径，并对理解非平衡态下微观体系的热力学行为具有重要意义。
+本实验以布朗运动为典型模型，研究不同噪声调控下布朗粒子的热扩散特性，探索微观粒子在非平衡环境中的统计行为与热力学响应。
+通过构建集光学观测与电噪声操控于一体的实验系统，我们在不改变体系实际温度的前提下，引入外部可控电噪声场，
+实现了对粒子表观扩散强度与有效温度的主动调控。
+实验结果表明，通过施加高斯白噪声可显著增强粒子的扩散行为，验证了噪声作为一种“人工热浴”在模拟高温扩散效应中的有效性。
+进一步地，我们建立了噪声调控下扩散系数与熵产生之间的关联，揭示了微观随机运动与热力学第二定律在非平衡条件下的内在一致性。
+本研究不仅为突破传统温控瓶颈提供了新范式，也为在微观尺度验证热力学基本规律、深入理解非平衡态体系的输运与耗散机制提供了新的实验途径。
 
-\par\textbf{关键字: } 布朗运动，熵产生率，热力学不确定关系
+\par\textbf{关键字: } 布朗运动，噪声调控，有效温度
 \end{cnabstract}
 
 \newpage
 \begin{enabstract}
 \large
 The basic laws of thermodynamics have been widely verified in the macro system, but its applicability at the micro scale still needs to be further explored.
-Based on the thermal motion of microscopic particles, this experiment takes Brownian motion as a typical model, combines experiments and theoretical analysis, and verifies the entropy generation mechanism in the irreversible process by measuring the random displacement behavior of Brownian particles.
-Furthermore, we establish the thermodynamic uncertainty relationship between diffusion coefficient and entropy generation in Brownian motion, and reveal the statistical law behind microscopic thermal motion and its consistency with the second law of thermodynamics.
-This experimental study provides an effective way to verify the basic laws of thermodynamics from the micro-scale, and is of great significance to understand the thermodynamic behavior of micro-systems in non-equilibrium state. 
-
+Taking Brownian motion as a typical model, this experiment studies the thermal diffusion characteristics of Brownian particles under different noise control, and explores the statistical behavior and thermodynamic response of microscopic particles in non-equilibrium environment.
+By constructing an experimental system integrating optical observation and electric noise control, we introduce an externally controllable electric noise field without changing the actual temperature of the system.
+The active regulation of the apparent diffusion intensity and effective temperature of particles is realized.
+The experimental results show that the diffusion behavior of particles can be significantly enhanced by applying Gaussian white noise, which verifies the effectiveness of noise as an "artificial hot bath" in simulating high temperature diffusion effect.
+Furthermore, we establish the correlation between diffusion coefficient and entropy generation under noise control, and reveal the internal consistency between microscopic random motion and the second law of thermodynamics under non-equilibrium conditions.
+This study not only provides a new paradigm for breaking through the bottleneck of traditional temperature control, but also provides a new experimental approach for verifying the basic laws of thermodynamics at the microscopic scale and deeply understanding the transport and dissipation mechanism of non-equilibrium systems.
+\par\textbf{Keyword: } Brownian motion, Noise Manipulation, Effective Temperature
 \end{enabstract}
 
 \tableofcontents
@@ -429,6 +437,19 @@ J(x,t) = \mu f(x,t)p(x,t) - D \partial_x p(x,t),
     \caption{实验装置示意图}
     \label{fig:sets}
 \end{figure} 
+\section{仪器性能指标评定}
+
+\section{局限性与误差来源分析}
+（1）在进行分辨率板的标定实验中，虽然我们确定了当分辨率板位于物镜工作平面时，相机每个像素对应的距离，但是在将分辨率板换为比色皿时，
+由于比色皿的厚度与分辨率板的厚度并不相同，且无法保证视野内观察到比色皿中的微球。此时，需要前后稍微移动物镜来使视野内有我们想要观察的PS微球。 \par
+（2）配制甘油与水的混合比例时，取一定量的水和甘油时会引入误差。\par
+（3）微球的浓度分布也会造成误差：微球浓度过高可能导致重叠或遮挡，浓度过低则统计样本不足；溶液未充分混合或存在团聚会影响扩散行为的代表性。\par
+（4）由于电极的宽度只有2mm，因此电极加载的电场会由于边缘效应而不均匀，电极未完全平行或紧贴比色皿壁，导致电场分布不均匀，影响等效温度实验的电压控制效果。\par
+（5）采集的粒子数量和时间有限，统计平均值可能与真实值有偏差。我们计算的物理量是基于统计平均的，因此对于有限的数据量，会由于随机性等产生误差。\par
+（6）不同的粒子识别算法与追踪算法也会带来误差，而且在图像中，粒子边缘模糊或多个粒子重叠会导致识别错误。\par
+
+\section{改进和优化思路}
+
 \chapter{实验内容}
 
 \section{实验操作}
@@ -569,7 +590,21 @@ $A = 2D.$在实际数据处理中，我们使用 \texttt{tp.emsd} 函数来计�
   \caption{不同粒径的实验MSD与拟合曲线以及局部放大图，以及扩散系数}
   \label{fig:fit1}
 \end{figure}
-得到上面的拟合数据后，可以将实验所得的扩散系数与理论值进行对比。根据
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+\hline
+粒径 & 扩散系数实验值 ($\mathrm{m^2/s}$) & 扩散系数理论值 ($\mathrm{m^2/s}$) & 相对误差 \\
+\hline
+0.5 $\mu$m & $9.809 \times 10^{-13}$ & $9.81 \times 10^{-13}$ & 0.01\% \\
+1.0 $\mu$m & $5.0602 \times 10^{-13}$ & $4.91 \times 10^{-13}$ & 3.1\% \\
+2.0 $\mu$m & $2.354885 \times 10^{-13}$ & $2.45 \times 10^{-13}$ & 3.9\% \\
+\hline
+\end{tabular}
+\caption{不同粒径下实验与理论扩散系数对比}
+\end{table}
+
+得到上面的数据后，可以将实验所得的扩散系数与理论值进行对比。根据
 \begin{equation}
     D = \frac{k_B T}{6 \pi \eta r},
 \end{equation}
@@ -599,6 +634,21 @@ $A = 2D.$在实际数据处理中，我们使用 \texttt{tp.emsd} 函数来计�
     \caption{0.5~$\mu$m的粒子在不同粘度溶液中的MSD}
     \label{fig:fit2}
 \end{figure}
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+\hline
+甘油体积分数 & 扩散系数实验值 ($\mathrm{m^2/s}$) & 扩散系数理论值 ($\mathrm{m^2/s}$) & 相对误差 \\
+\hline
+0\%  & $9.87447 \times 10^{-13}$ & $9.81 \times 10^{-13}$ & 0.66\% \\
+10\% & $7.3533 \times 10^{-13}$  & $7.16 \times 10^{-13}$ & 2.7\%  \\
+15\% & $5.804 \times 10^{-13}$   & $6.05 \times 10^{-13}$ & 4.1\%  \\
+20\% & $4.88932 \times 10^{-13}$ & $5.05 \times 10^{-13}$ & 3.2\%  \\
+30\% & $3.38662 \times 10^{-13}$ & $3.40 \times 10^{-13}$ & 0.40\% \\
+\hline
+\end{tabular}
+\caption{不同甘油体积分数下实验与理论扩散系数对比}
+\end{table}
 
 \section{计算等效温度与扩散系数}
 对于加载不同噪声强度的实验，我们以0.5~$\mu$m的粒子为例，为了验证我们能够将信号发生器的电压加载到电极并且对微球产生影响，我们
@@ -606,63 +656,42 @@ $A = 2D.$在实际数据处理中，我们使用 \texttt{tp.emsd} 函数来计�
 \begin{figure}[H]
     \centering
     % 每行 2 张
-    \begin{subfigure}{0.3\textwidth}
+    \begin{subfigure}{0.25\textwidth}
         \includegraphics[width=\linewidth]{10v0.5Hz.png}
         \caption{方波10v0.5Hz轨迹图}
     \end{subfigure}
-    \begin{subfigure}{0.6\textwidth}
+    \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\linewidth]{10v0.5Hz1.png}
         \caption{方波10v0.5Hz位移-时间图}
     \end{subfigure}
 
-    \begin{subfigure}{0.3\textwidth}
+    \begin{subfigure}{0.25\textwidth}
         \includegraphics[width=\linewidth]{10v0.1Hz.png}
         \caption{方波10v0.1Hz轨迹图}
     \end{subfigure}
-    \begin{subfigure}{0.6\textwidth}
+    \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\linewidth]{10v0.1Hz1.png}
         \caption{方波10v0.15Hz位移-时间图}
     \end{subfigure}
 
-    \begin{subfigure}{0.3\textwidth}
+    \begin{subfigure}{0.25\textwidth}
         \includegraphics[width=\linewidth]{sin10v0.5Hz1.png}
         \caption{正弦波10v0.5Hz轨迹图}
     \end{subfigure}
-    \begin{subfigure}{0.6\textwidth}
+    \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\linewidth]{sin10v0.5Hz.png}
         \caption{正弦波10v0.5Hz位移-时间图}
     \end{subfigure}
 
     \caption{0.5~$\mu$m的粒子在加载不同波形和频率的运动轨迹和x-t图}
 \end{figure}
-0.5微米ps球在不同电压下经过30秒布朗运动的x方向位移测算，得到x方向MSD数据如图所示，可见整体上随着电压增大，小球的总体MSD呈现增大趋势。分别以0v和10v为例，它们的粒子x方向位移随时间t的关系为：\par
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{粒子1.jpg}
-        \caption{0.5$\mu$m无噪声}
-    \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{粒子2.jpg}
-        \caption{0.5~$\mu$m10v噪声}
-    \end{subfigure}
 
-    \caption{实验数据拟合}
-\end{figure}
 在实验中，我们分别设置噪声强度为0--10v，电压间隔为2v，测量了不同噪声强度下0.5~$\mu$m粒子的MSD，如图所示：\par
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{不同噪声强度下的MSD.jpg}
+    \includegraphics[width=0.8\textwidth]{不同噪声强度下的MSD.png}
     \caption{不同噪声强度下的MSD}
     \label{fig:msdnoise}
-\end{figure}
-分别对这些 MSD 取稳定的前 30 个点进行数据拟合，即$\text{MSD} = 2Dt$
-的线性拟合，得到斜率之间的关系如图所示。
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{不同噪声强度下的扩散系数.jpg}
-    \caption{不同噪声强度下的扩散系数}
-    \label{fig:diffusionnoise}
 \end{figure}
 汇总扩散系数D拟合结果,同时根据\eqref{eq:Teff}我们也可以计算有效温度随电压的变化：
 \begin{table}[H]
@@ -697,40 +726,33 @@ $A = 2D.$在实际数据处理中，我们使用 \texttt{tp.emsd} 函数来计�
         \bottomrule
     \end{tabular}
 \end{table}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{温度.jpg}
-    \caption{有效温度随电压的变化趋势}
+    \includegraphics[width=0.8\textwidth]{二次拟合.png}
+    \caption{扩散系数随电压的二次函数关系}
     \label{fig:trends}
 \end{figure}
-对于有效温度：\\
-理论斜率：$a_{\text{theory}} = 2.596 \times 10^{-1} \ \text{K}/\text{V}^2$ \\ 
-实验斜率：$a_{\text{experimental}} = 2.546 \times 10^{-1} \ \text{K}/\text{V}^2$ \\ 
-相对误差：$= 1.90\%$\par
 根据公式\eqref{eq:D_sigma}，D和V之间应该满足二次关系。对D和V作图，进行$D = D_0 + kV^2$的二次拟合，得到拟合后的参数。
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.9\textwidth]{二次拟合.jpg}
-    \caption{扩散系数随电压的二次函数关系}
-    \label{fig:fit2V}
-\end{figure}
 我们可以得知
 \begin{equation}
     D = D_0 + \frac{\sigma^2}{(2\gamma)^2},
 \end{equation}
-又有
+
+对于有效温度：
 \begin{equation}
-    \sigma = \frac{|q|}{d_0}\,\alpha V,
-\end{equation}
-其中$\gamma = 6 \pi \eta r$是摩擦系数， $\alpha$ 是实验中用于修正的参数，即小球由于种种原因没有感受到理想状态下的电压。  
-因此，真正的 $D\!-\!V^2$ 参数应为
-\begin{equation}
-    \frac{q^2 \alpha^2}{2 \gamma^2 d_0^2}.
+    T_{\text{kin}} = T_{\omega} + \frac{\sigma^2}{2\text{k}\gamma},
 \end{equation}
 
-代入数据，其中 $q = 1.6\times 10^{-17}$（100 个电荷），$\alpha = 13\%$，$d_0 = 1.2\,\mathrm{cm}$。  
-二次函数的拟合参数为 $8.648\times 10^{-16}$，与实际值 $8.516\times 10^{-16}$ 对比，  
-最终误差为 $1.6\%$。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{有效温度.png}
+    \caption{有效温度随噪声电压的变化图}
+    \label{fig:fit2V}
+\end{figure}
+
+
 
 \section{注意事项}
 （1）每次使用完微量移液器，比色皿和电极片需要用无水乙醇清洗干净，防止污染。\par
@@ -739,15 +761,6 @@ $A = 2D.$在实际数据处理中，我们使用 \texttt{tp.emsd} 函数来计�
 （4）在使用信号发生器加载不同幅度的噪声时，需要确保电极是紧贴着内壁两侧。且加载电压要从0v逐渐增加到10v，而不能从10v逐渐降低电压
 至0v，防止微球先收到高电压的噪声未经静置而影响后续MSD的计算。\par
 （5）在进行分辨率板的标定实验后，需要固定其他剩余的实验装置，尤其是100x物镜和CCD的相对位置，以保证标定分辨率板后的像素尺寸不会发生变化。\par
-\chapter{误差分析}
-\section{误差来源分析}
-（1）在进行分辨率板的标定实验中，虽然我们确定了当分辨率板位于物镜工作平面时，相机每个像素对应的距离，但是在将分辨率板换为比色皿时，
-由于比色皿的厚度与分辨率板的厚度并不相同，且无法保证视野内观察到比色皿中的微球。此时，需要前后稍微移动物镜来使视野内有我们想要观察的PS微球。 \par
-（2）配制甘油与水的混合比例时，取一定量的水和甘油时会引入误差。\par
-（3）微球的浓度分布也会造成误差：微球浓度过高可能导致重叠或遮挡，浓度过低则统计样本不足；溶液未充分混合或存在团聚会影响扩散行为的代表性。\par
-（4）由于电极的宽度只有2mm，因此电极加载的电场会由于边缘效应而不均匀，电极未完全平行或紧贴比色皿壁，导致电场分布不均匀，影响等效温度实验的电压控制效果。\par
-（5）采集的粒子数量和时间有限，统计平均值可能与真实值有偏差。我们计算的物理量是基于统计平均的，因此对于有限的数据量，会由于随机性等产生误差。\par
-（6）不同的粒子识别算法与追踪算法也会带来误差，而且在图像中，粒子边缘模糊或多个粒子重叠会导致识别错误。\par
 
 \chapter{结论与展望}
 \section{实验结论}
@@ -874,11 +887,37 @@ $A = 2D.$在实际数据处理中，我们使用 \texttt{tp.emsd} 函数来计�
     \caption{MSD与延迟时间的关系}
     \label{fig:let1}
 \end{figure}
-\section{实验仪器规格}
-实验所用仪器相关的具体信息如下：
-分辨率板为 USAF 1951；100$\times$ 物镜（SOPTOP，NA = 0.80，工作距离 2~mm，有限远校正）；
-CCD 为海康机器人，分辨率 5472$\times$3648，像素间距 2.4~$\mu$m，20~fps；信号发生器型号为固纬 AFG-2225。
-\section{人员分工}
+\section{实验仪器规格与人员分工}
+\begin{table}[H]
+\centering
+\caption{成本统计表}
+\begin{tabular}{c c c c}
+\toprule
+序号 & 类别 & 名称 & 金额 \\
+\midrule
+1 & \multirow{4}{*}{耗材} & 甘油 & 34 \\
+2 &                     & PS微球（0.5、1、2$\mu$m） & 500 \\
+3 &                     & 烧杯等器皿 & 100 \\
+4 &                     & 比色皿 & 250 \\
+\midrule
+\multirow{3}{*}{5} & \multirow{3}{*}{电子元件} 
+ & LED光源 & 20 \\
+ & & MV-CS200-10UC工业相机 & 2000 \\
+ & & AFG-2225信号发生器 & 1500 \\
+\midrule
+\multirow{2}{*}{6} & \multirow{2}{*}{显微与标定模块} 
+ & 100x物镜（JCOPTIX NA=0.8 WD2） & 2450 \\
+ & & USAF 1951分辨率板 & 800 \\
+\midrule
+\multirow{2}{*}{7} & \multirow{2}{*}{平台与支架} 
+ & 光学平台 & 300 \\
+ & & 光学支架 & 500 \\
+\midrule
+ & & 合计 & 8454 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \renewcommand{\arraystretch}{1.3} % 表格行距调整
 
 \begin{tabularx}{\textwidth}{>{\bfseries}l X}
@@ -1125,9 +1164,6 @@ def calculate_basic_statistics(trajectories):
 
     \caption{不同直径粒子拍摄图（已转为灰度图）}
 \end{figure}
-
-\section{仪器使用说明书}
-
 \addcontentsline{toc}{chapter}{参考文献} % 手动加到目录
 \bibliographystyle{plain}
 \bibliography{refs}
